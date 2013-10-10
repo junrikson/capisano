@@ -8,10 +8,10 @@ Catering Pilih Pesan Online dengan SMS Gateway
 
 Project Created By : 	
 
-Jun Rikson - junrikson@gmail.com
-Yudi Ramadhan
-Rizky Mulia Hafiz
-Filbert Tan
+- Jun Rikson - junrikson@gmail.com
+- Yudi Ramadhan
+- Rizky Mulia Hafiz
+- Filbert Tan
 	
 Website : http://www.capisano.tk/
 	

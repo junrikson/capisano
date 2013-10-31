@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmServerSettings
+Partial Class frmLocalServerSettings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmServerSettings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmServerSettings))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLocalServerSettings))
         Me.lblExit = New System.Windows.Forms.Label()
         Me.lblMin = New System.Windows.Forms.Label()
         Me.txtDatabase = New System.Windows.Forms.TextBox()
@@ -173,9 +173,9 @@ Partial Class frmServerSettings
         Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label1.Location = New System.Drawing.Point(91, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(240, 23)
+        Me.Label1.Size = New System.Drawing.Size(212, 23)
         Me.Label1.TabIndex = 48
-        Me.Label1.Text = "Website Server Settings"
+        Me.Label1.Text = "Local Server Settings"
         '
         'PictureBox1
         '

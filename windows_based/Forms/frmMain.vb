@@ -37,7 +37,7 @@
     End Sub
 
     Private Sub lblMin_MouseLeave(sender As Object, e As EventArgs) Handles lblMin.MouseLeave
-        lblMin.BackColor = Color.Transparent
+        lblMin.BackColor = panelTop.BackColor
     End Sub
 
     Private Sub lblMin_MouseMove(sender As Object, e As MouseEventArgs) Handles lblMin.MouseMove
@@ -53,7 +53,7 @@
     End Sub
 
     Private Sub lblMax_MouseLeave(sender As Object, e As EventArgs) Handles lblMax.MouseLeave
-        lblMax.BackColor = Color.Transparent
+        lblMax.BackColor = panelTop.BackColor
     End Sub
 
     Private Sub lblMax_MouseMove(sender As Object, e As MouseEventArgs) Handles lblMax.MouseMove
@@ -65,7 +65,7 @@
     End Sub
 
     Private Sub lblExit_MouseLeave(sender As Object, e As EventArgs) Handles lblExit.MouseLeave
-        lblExit.BackColor = Color.Transparent
+        lblExit.BackColor = panelTop.BackColor
     End Sub
 
     Private Sub lblExit_MouseMove(sender As Object, e As MouseEventArgs) Handles lblExit.MouseMove
@@ -82,5 +82,19 @@
         lineBottom1.X2 = Me.Width
         lineBottom1.Y1 = Me.Height - 5
         lineBottom1.Y2 = Me.Height - 5
+        panelTop.Size = New Point(Me.Width, 80)
+        menuMain.Size = New Point(Me.Width, 24)
+    End Sub
+
+    Private Sub WebSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WebSettingsToolStripMenuItem.Click
+        frmServerSettings.Show()
+    End Sub
+
+    Private Sub SMSTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SMSTemplateToolStripMenuItem.Click
+        frmSMSTemplate.Show()
+    End Sub
+
+    Private Sub DaftarItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarItemToolStripMenuItem.Click
+        frmDaftarItem.Show()
     End Sub
 End Class

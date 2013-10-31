@@ -21,19 +21,19 @@
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
-        frmServerSettings.Close()
+        frmLocalServerSettings.Close()
         frmMain.Close()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Me.Close()
-        frmServerSettings.Close()
+        frmLocalServerSettings.Close()
         frmMain.Show()
         frmMain.timerShow.Start()
     End Sub
 
     Private Sub btnServerSettings_Click(sender As Object, e As EventArgs) Handles btnServerSettings.Click
-        frmServerSettings.ShowDialog()
+        frmLocalServerSettings.ShowDialog()
     End Sub
 
     Private Sub timerShow_Tick(sender As Object, e As EventArgs) Handles timerShow.Tick

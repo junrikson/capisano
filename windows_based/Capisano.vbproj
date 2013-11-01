@@ -65,6 +65,12 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmDaftarKategoriMenu.Designer.vb">
+      <DependentUpon>frmDaftarKategoriMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaftarKategoriMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmDaftarItem.Designer.vb">
       <DependentUpon>frmDaftarItem.vb</DependentUpon>
     </Compile>
@@ -75,6 +81,18 @@
       <DependentUpon>frmAbout.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDaftarKategoriItem.Designer.vb">
+      <DependentUpon>frmDaftarKategoriItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaftarKategoriItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDaftarMenu.Designer.vb">
+      <DependentUpon>frmDaftarMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaftarMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmServerSettings.Designer.vb">
@@ -131,8 +149,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\frmDaftarKategoriMenu.resx">
+      <DependentUpon>frmDaftarKategoriMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDaftarItem.resx">
       <DependentUpon>frmDaftarItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDaftarKategoriItem.resx">
+      <DependentUpon>frmDaftarKategoriItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDaftarMenu.resx">
+      <DependentUpon>frmDaftarMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmServerSettings.resx">
       <DependentUpon>frmServerSettings.vb</DependentUpon>

@@ -32,25 +32,27 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.menuMain = New System.Windows.Forms.MenuStrip()
         Me.TOOLSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DaftarKategoriToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DaftarItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DaftarKategoriMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DaftarMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonthlyReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailyReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.toolstripMain = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SETTINGSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SMSSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SMSTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolstripMain = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.imgBottom1 = New System.Windows.Forms.PictureBox()
         Me.lineBottom1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.panelTop = New System.Windows.Forms.Panel()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SMSTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DaftarItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DaftarMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DaftarKategoriToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuMain.SuspendLayout()
         CType(Me.imgBottom1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,16 +136,45 @@ Partial Class frmMain
         '
         'TOOLSToolStripMenuItem
         '
-        Me.TOOLSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarItemToolStripMenuItem, Me.DaftarMenuToolStripMenuItem, Me.DaftarKategoriToolStripMenuItem})
+        Me.TOOLSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarKategoriToolStripMenuItem, Me.DaftarItemToolStripMenuItem, Me.ToolStripSeparator3, Me.DaftarKategoriMenuToolStripMenuItem, Me.DaftarMenuToolStripMenuItem})
         Me.TOOLSToolStripMenuItem.Name = "TOOLSToolStripMenuItem"
-        Me.TOOLSToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
-        Me.TOOLSToolStripMenuItem.Text = "MASTER"
+        Me.TOOLSToolStripMenuItem.Size = New System.Drawing.Size(98, 20)
+        Me.TOOLSToolStripMenuItem.Text = "DATA MASTER"
+        '
+        'DaftarKategoriToolStripMenuItem
+        '
+        Me.DaftarKategoriToolStripMenuItem.Name = "DaftarKategoriToolStripMenuItem"
+        Me.DaftarKategoriToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DaftarKategoriToolStripMenuItem.Text = "Daftar Kategori Item"
+        '
+        'DaftarItemToolStripMenuItem
+        '
+        Me.DaftarItemToolStripMenuItem.Name = "DaftarItemToolStripMenuItem"
+        Me.DaftarItemToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DaftarItemToolStripMenuItem.Text = "Daftar Item"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(184, 6)
+        '
+        'DaftarKategoriMenuToolStripMenuItem
+        '
+        Me.DaftarKategoriMenuToolStripMenuItem.Name = "DaftarKategoriMenuToolStripMenuItem"
+        Me.DaftarKategoriMenuToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DaftarKategoriMenuToolStripMenuItem.Text = "Daftar Kategori Menu"
+        '
+        'DaftarMenuToolStripMenuItem
+        '
+        Me.DaftarMenuToolStripMenuItem.Name = "DaftarMenuToolStripMenuItem"
+        Me.DaftarMenuToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DaftarMenuToolStripMenuItem.Text = "Daftar Menu "
         '
         'SMSToolStripMenuItem
         '
         Me.SMSToolStripMenuItem.Name = "SMSToolStripMenuItem"
-        Me.SMSToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
-        Me.SMSToolStripMenuItem.Text = "SMS"
+        Me.SMSToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.SMSToolStripMenuItem.Text = "TOOLS"
         '
         'REPORTSToolStripMenuItem
         '
@@ -164,21 +195,6 @@ Partial Class frmMain
         Me.DailyReportsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.DailyReportsToolStripMenuItem.Text = "Daily Reports"
         '
-        'toolstripMain
-        '
-        Me.toolstripMain.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.toolstripMain.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewHelpToolStripMenuItem, Me.AboutToolStripMenuItem1})
-        Me.toolstripMain.ImageTransparentColor = System.Drawing.SystemColors.Control
-        Me.toolstripMain.Name = "toolstripMain"
-        Me.toolstripMain.Size = New System.Drawing.Size(47, 20)
-        Me.toolstripMain.Text = "HELP"
-        '
-        'AboutToolStripMenuItem1
-        '
-        Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
-        Me.AboutToolStripMenuItem1.Text = "About"
-        '
         'SETTINGSToolStripMenuItem
         '
         Me.SETTINGSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebSettingsToolStripMenuItem, Me.ToolStripSeparator1, Me.SMSSettingsToolStripMenuItem, Me.SMSTemplateToolStripMenuItem})
@@ -189,14 +205,46 @@ Partial Class frmMain
         'WebSettingsToolStripMenuItem
         '
         Me.WebSettingsToolStripMenuItem.Name = "WebSettingsToolStripMenuItem"
-        Me.WebSettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WebSettingsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.WebSettingsToolStripMenuItem.Text = "Server Settings"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(148, 6)
         '
         'SMSSettingsToolStripMenuItem
         '
         Me.SMSSettingsToolStripMenuItem.Name = "SMSSettingsToolStripMenuItem"
-        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.SMSSettingsToolStripMenuItem.Text = "SMS Settings"
+        '
+        'SMSTemplateToolStripMenuItem
+        '
+        Me.SMSTemplateToolStripMenuItem.Name = "SMSTemplateToolStripMenuItem"
+        Me.SMSTemplateToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.SMSTemplateToolStripMenuItem.Text = "SMS Template"
+        '
+        'toolstripMain
+        '
+        Me.toolstripMain.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.toolstripMain.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewHelpToolStripMenuItem, Me.AboutToolStripMenuItem1})
+        Me.toolstripMain.ImageTransparentColor = System.Drawing.SystemColors.Control
+        Me.toolstripMain.Name = "toolstripMain"
+        Me.toolstripMain.Size = New System.Drawing.Size(47, 20)
+        Me.toolstripMain.Text = "HELP"
+        '
+        'ViewHelpToolStripMenuItem
+        '
+        Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.ViewHelpToolStripMenuItem.Text = "View Help"
+        '
+        'AboutToolStripMenuItem1
+        '
+        Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(127, 22)
+        Me.AboutToolStripMenuItem1.Text = "About"
         '
         'imgBottom1
         '
@@ -236,41 +284,6 @@ Partial Class frmMain
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(800, 80)
         Me.panelTop.TabIndex = 55
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(193, 6)
-        '
-        'SMSTemplateToolStripMenuItem
-        '
-        Me.SMSTemplateToolStripMenuItem.Name = "SMSTemplateToolStripMenuItem"
-        Me.SMSTemplateToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.SMSTemplateToolStripMenuItem.Text = "SMS Template"
-        '
-        'ViewHelpToolStripMenuItem
-        '
-        Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ViewHelpToolStripMenuItem.Text = "View Help"
-        '
-        'DaftarItemToolStripMenuItem
-        '
-        Me.DaftarItemToolStripMenuItem.Name = "DaftarItemToolStripMenuItem"
-        Me.DaftarItemToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.DaftarItemToolStripMenuItem.Text = "Daftar Item"
-        '
-        'DaftarMenuToolStripMenuItem
-        '
-        Me.DaftarMenuToolStripMenuItem.Name = "DaftarMenuToolStripMenuItem"
-        Me.DaftarMenuToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.DaftarMenuToolStripMenuItem.Text = "Daftar Menu"
-        '
-        'DaftarKategoriToolStripMenuItem
-        '
-        Me.DaftarKategoriToolStripMenuItem.Name = "DaftarKategoriToolStripMenuItem"
-        Me.DaftarKategoriToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.DaftarKategoriToolStripMenuItem.Text = "Daftar Kategori"
         '
         'frmMain
         '
@@ -329,5 +342,7 @@ Partial Class frmMain
     Friend WithEvents DaftarItemToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarMenuToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarKategoriToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents DaftarKategoriMenuToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

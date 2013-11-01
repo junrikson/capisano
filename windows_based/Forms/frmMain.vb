@@ -97,4 +97,16 @@
     Private Sub DaftarItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarItemToolStripMenuItem.Click
         frmDaftarItem.Show()
     End Sub
+
+    Private Sub DaftarMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarMenuToolStripMenuItem.Click
+        frmDaftarMenu.Show()
+    End Sub
+
+    Private Sub DaftarKategoriToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarKategoriToolStripMenuItem.Click
+        frmDaftarKategoriItem.Show()
+    End Sub
+
+    Private Sub DaftarKategoriMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarKategoriMenuToolStripMenuItem.Click
+        frmDaftarKategoriMenu.Show()
+    End Sub
 End Class

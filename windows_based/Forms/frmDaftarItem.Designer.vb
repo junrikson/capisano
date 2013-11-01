@@ -38,13 +38,15 @@ Partial Class frmDaftarItem
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(181, 379)
+        Me.Button2.Location = New System.Drawing.Point(207, 410)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 17
@@ -53,7 +55,7 @@ Partial Class frmDaftarItem
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(19, 379)
+        Me.Button1.Location = New System.Drawing.Point(45, 410)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 16
@@ -62,14 +64,14 @@ Partial Class frmDaftarItem
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(65, 272)
+        Me.TextBox2.Location = New System.Drawing.Point(65, 269)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(275, 20)
         Me.TextBox2.TabIndex = 14
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(65, 246)
+        Me.TextBox1.Location = New System.Drawing.Point(65, 243)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 13
@@ -77,7 +79,7 @@ Partial Class frmDaftarItem
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 301)
+        Me.Label3.Location = New System.Drawing.Point(9, 298)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 12
@@ -86,7 +88,7 @@ Partial Class frmDaftarItem
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(23, 275)
+        Me.Label2.Location = New System.Drawing.Point(23, 272)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 11
@@ -95,7 +97,7 @@ Partial Class frmDaftarItem
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(26, 249)
+        Me.Label1.Location = New System.Drawing.Point(26, 246)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 10
@@ -104,14 +106,14 @@ Partial Class frmDaftarItem
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 41)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 38)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(496, 197)
         Me.DataGridView1.TabIndex = 20
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(433, 12)
+        Me.Button5.Location = New System.Drawing.Point(433, 9)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 21
@@ -120,7 +122,7 @@ Partial Class frmDaftarItem
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 15)
+        Me.TextBox3.Location = New System.Drawing.Point(12, 12)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(415, 20)
         Me.TextBox3.TabIndex = 22
@@ -128,7 +130,7 @@ Partial Class frmDaftarItem
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(352, 246)
+        Me.PictureBox1.Location = New System.Drawing.Point(352, 243)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(156, 156)
         Me.PictureBox1.TabIndex = 23
@@ -136,7 +138,7 @@ Partial Class frmDaftarItem
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(262, 379)
+        Me.Button3.Location = New System.Drawing.Point(385, 410)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 23)
         Me.Button3.TabIndex = 25
@@ -145,7 +147,7 @@ Partial Class frmDaftarItem
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(100, 379)
+        Me.Button4.Location = New System.Drawing.Point(126, 410)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 26
@@ -154,7 +156,7 @@ Partial Class frmDaftarItem
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(65, 324)
+        Me.TextBox5.Location = New System.Drawing.Point(65, 321)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
         Me.TextBox5.TabIndex = 28
@@ -162,7 +164,7 @@ Partial Class frmDaftarItem
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(26, 327)
+        Me.Label4.Location = New System.Drawing.Point(26, 324)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 27
@@ -171,16 +173,35 @@ Partial Class frmDaftarItem
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(65, 299)
+        Me.ComboBox1.Location = New System.Drawing.Point(65, 296)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
         Me.ComboBox1.TabIndex = 29
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(65, 348)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(273, 51)
+        Me.RichTextBox1.TabIndex = 50
+        Me.RichTextBox1.Text = ""
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(18, 348)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(45, 13)
+        Me.Label6.TabIndex = 49
+        Me.Label6.Text = "Details :"
         '
         'frmDaftarItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 414)
+        Me.ClientSize = New System.Drawing.Size(520, 445)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label4)
@@ -221,4 +242,6 @@ Partial Class frmDaftarItem
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

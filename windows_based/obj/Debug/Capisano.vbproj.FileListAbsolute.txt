@@ -13,3 +13,6 @@ C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frm
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmServerSettings.resources
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmSMSSettings.resources
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarItem.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarMenu.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarKategoriItem.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarKategoriMenu.resources

@@ -34,14 +34,23 @@
             	<div class="wrapper">
                 	<h1><a href="index.html">Capisano - <span>( Catering Pilih Pesan Online dengan SMS Gateway )</span></a></h1>
                     <nav>
-                        <ul class="menu">
-                            <li><a class="active" href="index.html">Home</a></li>
+                    <div id = "cssmenu">
+                        <ul>
+                            <li class="active"><a href="index.html">Home</a></li>
                             <li><a href="menu.html">Menu</a></li>
                             <li><a href="catalogue.html">Catalogue </a></li>
                             <li><a href="shipping.html">Shipping</a></li>
                             <li><a href="faq.html">FAQ </a></li>
                             <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                            <li class='has-sub last'><a href='#'><span>Account</span></a>
+      							<ul>
+         						<li><a href='login.html'><span>Login</span></a></li>
+         						<li><a href='register.html'><span>Daftar</span></a></li><hr/>
+         						<li class='last'><a href='forgot.html'><span>Lupa Password?</span></a></li>
+      							</ul>
+   							</li>
+                        </ul><br>	
+                        </div>				
                     </nav>
                 </div>
             </div>
@@ -87,17 +96,15 @@
             <div class="wrapper">
             	<article class="column-1">
                 	<div class="indent-left">
-                        <div class="maxheight indent-bot">
-                            <h3>Our Services</h3>
-                            <ul class="list-1">
-                                <li><a href="#">Duis autem vel eum iriure dolor</a></li>
-                                <li><a href="#">Hendrerit in vulputate velit esse molestie </a></li>
-                                <li><a href="#">Consequat vel illum dolore</a></li>
-                                <li><a href="#">Feugiat nulla facilisis at vero eros</a></li>
-                                <li><a href="#">Accumsan et iusto odio dignissim qui</a></li>
-                                <li><a href="#">Blandit praesent luptatum azril</a></li>
-                                <li><a href="#">Delenit augue duis dolore te feugait</a></li>
-                            </ul>
+						<div class="maxheight indent-bot">
+                            <form action="">
+                            <h3 class="p1">Login Form</h3>                       							
+							<div><input type="text" placeholder="Email / HP" required id="username" /></div><br/>
+							<div><input type="password" placeholder="Password" required id="password" /></div><br/>						
+							<input type="submit" value="Log in" />
+							<a href="#">Lupa password?</a>
+							<a href="#">Daftar</a>
+							</form>
                         </div>
                         <a class="button-1" href="#">Read More</a>
                     </div>

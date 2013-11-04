@@ -65,6 +65,24 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmActivityLog.Designer.vb">
+      <DependentUpon>frmActivityLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActivityLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClosingBulanan.Designer.vb">
+      <DependentUpon>frmClosingBulanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClosingBulanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDaftarKategoriItem.Designer.vb">
+      <DependentUpon>frmDaftarKategoriItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaftarKategoriItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmDaftarKategoriMenu.Designer.vb">
       <DependentUpon>frmDaftarKategoriMenu.vb</DependentUpon>
     </Compile>
@@ -83,16 +101,28 @@
     <Compile Include="Forms\frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmDaftarKategoriItem.Designer.vb">
-      <DependentUpon>frmDaftarKategoriItem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmDaftarKategoriItem.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frmDaftarMenu.Designer.vb">
       <DependentUpon>frmDaftarMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmDaftarMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGantiPeriode.Designer.vb">
+      <DependentUpon>frmGantiPeriode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGantiPeriode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOrderAndPending.Designer.vb">
+      <DependentUpon>frmOrderAndPending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOrderAndPending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPaymentsAndPending.Designer.vb">
+      <DependentUpon>frmPaymentsAndPending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPaymentsAndPending.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmServerSettings.Designer.vb">
@@ -132,6 +162,12 @@
     <Compile Include="Forms\frmSMSTemplate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmUsersManagement.Designer.vb">
+      <DependentUpon>frmUsersManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsersManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -149,17 +185,35 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActivityLog.resx">
+      <DependentUpon>frmActivityLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClosingBulanan.resx">
+      <DependentUpon>frmClosingBulanan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDaftarKategoriItem.resx">
+      <DependentUpon>frmDaftarKategoriItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDaftarKategoriMenu.resx">
       <DependentUpon>frmDaftarKategoriMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDaftarItem.resx">
       <DependentUpon>frmDaftarItem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmDaftarKategoriItem.resx">
-      <DependentUpon>frmDaftarKategoriItem.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDaftarMenu.resx">
       <DependentUpon>frmDaftarMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGantiPeriode.resx">
+      <DependentUpon>frmGantiPeriode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOrderAndPending.resx">
+      <DependentUpon>frmOrderAndPending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPaymentsAndPending.resx">
+      <DependentUpon>frmPaymentsAndPending.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmServerSettings.resx">
       <DependentUpon>frmServerSettings.vb</DependentUpon>

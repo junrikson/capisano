@@ -53,6 +53,16 @@ Partial Class frmMain
         Me.lineBottom1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.panelTop = New System.Windows.Forms.Panel()
+        Me.panelMain = New System.Windows.Forms.Panel()
+        Me.OrderPendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaymentPendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClosingBulananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GantiPeriodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.OrderReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaymentsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministratorLogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserManagementToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuMain.SuspendLayout()
         CType(Me.imgBottom1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +72,7 @@ Partial Class frmMain
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(36, 11)
         Me.Label1.Name = "Label1"
@@ -172,13 +183,14 @@ Partial Class frmMain
         '
         'SMSToolStripMenuItem
         '
+        Me.SMSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrderPendingToolStripMenuItem, Me.PaymentPendingToolStripMenuItem, Me.ToolStripSeparator2, Me.UserManagementToolStripMenuItem1, Me.AdministratorLogsToolStripMenuItem, Me.ClosingBulananToolStripMenuItem, Me.GantiPeriodeToolStripMenuItem})
         Me.SMSToolStripMenuItem.Name = "SMSToolStripMenuItem"
         Me.SMSToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.SMSToolStripMenuItem.Text = "TOOLS"
         '
         'REPORTSToolStripMenuItem
         '
-        Me.REPORTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MonthlyReportsToolStripMenuItem, Me.DailyReportsToolStripMenuItem})
+        Me.REPORTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DailyReportsToolStripMenuItem, Me.MonthlyReportsToolStripMenuItem, Me.OrderReportToolStripMenuItem, Me.PaymentsReportToolStripMenuItem})
         Me.REPORTSToolStripMenuItem.Name = "REPORTSToolStripMenuItem"
         Me.REPORTSToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.REPORTSToolStripMenuItem.Text = "REPORTS"
@@ -216,7 +228,7 @@ Partial Class frmMain
         'SMSSettingsToolStripMenuItem
         '
         Me.SMSSettingsToolStripMenuItem.Name = "SMSSettingsToolStripMenuItem"
-        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SMSSettingsToolStripMenuItem.Text = "SMS Settings"
         '
         'SMSTemplateToolStripMenuItem
@@ -237,13 +249,13 @@ Partial Class frmMain
         'ViewHelpToolStripMenuItem
         '
         Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
-        Me.ViewHelpToolStripMenuItem.Text = "View Help"
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewHelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(127, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'imgBottom1
@@ -279,18 +291,82 @@ Partial Class frmMain
         '
         'panelTop
         '
+        Me.panelTop.BackColor = System.Drawing.SystemColors.Control
         Me.panelTop.Controls.Add(Me.menuMain)
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(800, 80)
         Me.panelTop.TabIndex = 55
         '
+        'panelMain
+        '
+        Me.panelMain.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.panelMain.Location = New System.Drawing.Point(0, 87)
+        Me.panelMain.Name = "panelMain"
+        Me.panelMain.Size = New System.Drawing.Size(788, 276)
+        Me.panelMain.TabIndex = 56
+        '
+        'OrderPendingToolStripMenuItem
+        '
+        Me.OrderPendingToolStripMenuItem.Name = "OrderPendingToolStripMenuItem"
+        Me.OrderPendingToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.OrderPendingToolStripMenuItem.Text = "Order and Pending"
+        '
+        'PaymentPendingToolStripMenuItem
+        '
+        Me.PaymentPendingToolStripMenuItem.Name = "PaymentPendingToolStripMenuItem"
+        Me.PaymentPendingToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.PaymentPendingToolStripMenuItem.Text = "Payments and Pending"
+        '
+        'ClosingBulananToolStripMenuItem
+        '
+        Me.ClosingBulananToolStripMenuItem.Name = "ClosingBulananToolStripMenuItem"
+        Me.ClosingBulananToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.ClosingBulananToolStripMenuItem.Text = "Closing Bulanan"
+        '
+        'GantiPeriodeToolStripMenuItem
+        '
+        Me.GantiPeriodeToolStripMenuItem.Name = "GantiPeriodeToolStripMenuItem"
+        Me.GantiPeriodeToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.GantiPeriodeToolStripMenuItem.Text = "Ganti Periode"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(165, 6)
+        '
+        'OrderReportToolStripMenuItem
+        '
+        Me.OrderReportToolStripMenuItem.Name = "OrderReportToolStripMenuItem"
+        Me.OrderReportToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.OrderReportToolStripMenuItem.Text = "Order Report"
+        '
+        'PaymentsReportToolStripMenuItem
+        '
+        Me.PaymentsReportToolStripMenuItem.Name = "PaymentsReportToolStripMenuItem"
+        Me.PaymentsReportToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.PaymentsReportToolStripMenuItem.Text = "Payments Report"
+        '
+        'AdministratorLogsToolStripMenuItem
+        '
+        Me.AdministratorLogsToolStripMenuItem.Name = "AdministratorLogsToolStripMenuItem"
+        Me.AdministratorLogsToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.AdministratorLogsToolStripMenuItem.Text = "Activity Logs"
+        '
+        'UserManagementToolStripMenuItem1
+        '
+        Me.UserManagementToolStripMenuItem1.Name = "UserManagementToolStripMenuItem1"
+        Me.UserManagementToolStripMenuItem1.Size = New System.Drawing.Size(196, 22)
+        Me.UserManagementToolStripMenuItem1.Text = "Users Management"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.ControlBox = False
+        Me.Controls.Add(Me.panelMain)
         Me.Controls.Add(Me.imgBottom1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblMin)
@@ -300,7 +376,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.menuMain
         Me.Name = "frmMain"
         Me.Opacity = 0.0R
@@ -344,5 +419,15 @@ Partial Class frmMain
     Friend WithEvents DaftarKategoriToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents DaftarKategoriMenuToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents panelMain As System.Windows.Forms.Panel
+    Friend WithEvents OrderPendingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PaymentPendingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ClosingBulananToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GantiPeriodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OrderReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PaymentsReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AdministratorLogsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UserManagementToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

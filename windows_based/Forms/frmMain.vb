@@ -84,29 +84,106 @@
         lineBottom1.Y2 = Me.Height - 5
         panelTop.Size = New Point(Me.Width, 80)
         menuMain.Size = New Point(Me.Width, 24)
+        panelMain.Size = New Point(Me.Width, Me.Height - 150)
     End Sub
 
     Private Sub WebSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WebSettingsToolStripMenuItem.Click
-        frmServerSettings.Show()
+        Dim frm As New frmServerSettings
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
     End Sub
 
     Private Sub SMSTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SMSTemplateToolStripMenuItem.Click
-        frmSMSTemplate.Show()
+        Dim frm As New frmSMSTemplate
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
     End Sub
 
     Private Sub DaftarItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarItemToolStripMenuItem.Click
-        frmDaftarItem.Show()
+        Dim frm As New frmDaftarItem
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
     End Sub
 
     Private Sub DaftarMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarMenuToolStripMenuItem.Click
-        frmDaftarMenu.Show()
-    End Sub
-
-    Private Sub DaftarKategoriToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarKategoriToolStripMenuItem.Click
-        frmDaftarKategoriItem.Show()
+        Dim frm As New frmDaftarMenu
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
     End Sub
 
     Private Sub DaftarKategoriMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarKategoriMenuToolStripMenuItem.Click
-        frmDaftarKategoriMenu.Show()
+        Dim frm As New frmDaftarKategoriMenu
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub DaftarKategoriToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarKategoriToolStripMenuItem.Click
+        Dim frm As New frmDaftarKategoriItem
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub SMSSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SMSSettingsToolStripMenuItem.Click
+        Dim frm As New frmSMSSettings
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
+        frmAbout.Show()
+    End Sub
+
+    Private Sub OrderPendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderPendingToolStripMenuItem.Click
+        Dim frm As New frmOrderAndPending
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub PaymentPendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaymentPendingToolStripMenuItem.Click
+        Dim frm As New frmPaymentsAndPending
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub UserManagementToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UserManagementToolStripMenuItem1.Click
+        Dim frm As New frmUsersManagement
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub AdministratorLogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministratorLogsToolStripMenuItem.Click
+        Dim frm As New frmActivityLog
+        frm.TopLevel = False
+        frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        panelMain.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub ClosingBulananToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClosingBulananToolStripMenuItem.Click
+        frmClosingBulanan.Show()
+    End Sub
+
+    Private Sub GantiPeriodeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GantiPeriodeToolStripMenuItem.Click
+        frmGantiPeriode.Show()
     End Sub
 End Class

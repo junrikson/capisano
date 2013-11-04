@@ -1,3 +1,3 @@
-﻿Public Class frmDaftarKategoriMenu
+﻿Public Class frmDaftarKategoriItem
 
 End Class

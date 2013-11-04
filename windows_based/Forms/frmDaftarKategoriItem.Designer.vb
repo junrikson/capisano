@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDaftarKategoriMenu
+Partial Class frmDaftarKategoriItem
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -155,7 +155,7 @@ Partial Class frmDaftarKategoriMenu
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmDaftarKategoriItem"
-        Me.Text = "frmDaftarKategoriItem"
+        Me.Text = "Daftar Kategori Item"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

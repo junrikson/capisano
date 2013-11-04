@@ -32,12 +32,16 @@ Partial Class frmSMSTemplate
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(70, 38)
+        Me.Label1.Location = New System.Drawing.Point(43, 223)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 0
@@ -46,7 +50,7 @@ Partial Class frmSMSTemplate
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(42, 64)
+        Me.Label2.Location = New System.Drawing.Point(15, 249)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 13)
         Me.Label2.TabIndex = 1
@@ -55,7 +59,7 @@ Partial Class frmSMSTemplate
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(52, 93)
+        Me.Label3.Location = New System.Drawing.Point(25, 278)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 13)
         Me.Label3.TabIndex = 2
@@ -63,21 +67,21 @@ Partial Class frmSMSTemplate
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(114, 35)
+        Me.TextBox1.Location = New System.Drawing.Point(87, 220)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 3
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(114, 61)
+        Me.TextBox2.Location = New System.Drawing.Point(87, 246)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(353, 20)
         Me.TextBox2.TabIndex = 4
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(114, 90)
+        Me.RichTextBox1.Location = New System.Drawing.Point(87, 275)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(353, 96)
         Me.RichTextBox1.TabIndex = 5
@@ -85,7 +89,7 @@ Partial Class frmSMSTemplate
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(47, 223)
+        Me.Button1.Location = New System.Drawing.Point(46, 393)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 6
@@ -94,7 +98,7 @@ Partial Class frmSMSTemplate
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(139, 223)
+        Me.Button2.Location = New System.Drawing.Point(138, 393)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 7
@@ -103,7 +107,7 @@ Partial Class frmSMSTemplate
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(230, 223)
+        Me.Button3.Location = New System.Drawing.Point(229, 393)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 8
@@ -112,18 +116,45 @@ Partial Class frmSMSTemplate
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(321, 223)
+        Me.Button4.Location = New System.Drawing.Point(320, 393)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 9
         Me.Button4.Text = "<< Previous"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(12, 12)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(348, 20)
+        Me.TextBox3.TabIndex = 42
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(366, 10)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 41
+        Me.Button5.Text = "Refresh"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 38)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(429, 169)
+        Me.DataGridView1.TabIndex = 40
+        '
         'frmSMSTemplate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(521, 299)
+        Me.ClientSize = New System.Drawing.Size(454, 436)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -135,7 +166,8 @@ Partial Class frmSMSTemplate
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmSMSTemplate"
-        Me.Text = "frmSMSTemplate"
+        Me.Text = "SMS Template"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,4 +182,7 @@ Partial Class frmSMSTemplate
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

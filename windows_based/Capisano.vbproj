@@ -233,6 +233,9 @@
     <EmbeddedResource Include="Forms\frmSMSTemplate.resx">
       <DependentUpon>frmSMSTemplate.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsersManagement.resx">
+      <DependentUpon>frmUsersManagement.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

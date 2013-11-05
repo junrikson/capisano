@@ -38,9 +38,18 @@ Partial Class frmMain
         Me.DaftarKategoriMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrderPendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaymentPendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UserManagementToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministratorLogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClosingBulananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GantiPeriodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MonthlyReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailyReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MonthlyReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrderReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaymentsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SETTINGSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -54,15 +63,6 @@ Partial Class frmMain
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.panelMain = New System.Windows.Forms.Panel()
-        Me.OrderPendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PaymentPendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClosingBulananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GantiPeriodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.OrderReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PaymentsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdministratorLogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserManagementToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuMain.SuspendLayout()
         CType(Me.imgBottom1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -188,6 +188,47 @@ Partial Class frmMain
         Me.SMSToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.SMSToolStripMenuItem.Text = "TOOLS"
         '
+        'OrderPendingToolStripMenuItem
+        '
+        Me.OrderPendingToolStripMenuItem.Name = "OrderPendingToolStripMenuItem"
+        Me.OrderPendingToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.OrderPendingToolStripMenuItem.Text = "Orders and Pending"
+        '
+        'PaymentPendingToolStripMenuItem
+        '
+        Me.PaymentPendingToolStripMenuItem.Name = "PaymentPendingToolStripMenuItem"
+        Me.PaymentPendingToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.PaymentPendingToolStripMenuItem.Text = "Payments and Pending"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(193, 6)
+        '
+        'UserManagementToolStripMenuItem1
+        '
+        Me.UserManagementToolStripMenuItem1.Name = "UserManagementToolStripMenuItem1"
+        Me.UserManagementToolStripMenuItem1.Size = New System.Drawing.Size(196, 22)
+        Me.UserManagementToolStripMenuItem1.Text = "Users Management"
+        '
+        'AdministratorLogsToolStripMenuItem
+        '
+        Me.AdministratorLogsToolStripMenuItem.Name = "AdministratorLogsToolStripMenuItem"
+        Me.AdministratorLogsToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.AdministratorLogsToolStripMenuItem.Text = "Activity Logs"
+        '
+        'ClosingBulananToolStripMenuItem
+        '
+        Me.ClosingBulananToolStripMenuItem.Name = "ClosingBulananToolStripMenuItem"
+        Me.ClosingBulananToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.ClosingBulananToolStripMenuItem.Text = "Closing Bulanan"
+        '
+        'GantiPeriodeToolStripMenuItem
+        '
+        Me.GantiPeriodeToolStripMenuItem.Name = "GantiPeriodeToolStripMenuItem"
+        Me.GantiPeriodeToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.GantiPeriodeToolStripMenuItem.Text = "Ganti Periode"
+        '
         'REPORTSToolStripMenuItem
         '
         Me.REPORTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DailyReportsToolStripMenuItem, Me.MonthlyReportsToolStripMenuItem, Me.OrderReportToolStripMenuItem, Me.PaymentsReportToolStripMenuItem})
@@ -195,17 +236,29 @@ Partial Class frmMain
         Me.REPORTSToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.REPORTSToolStripMenuItem.Text = "REPORTS"
         '
-        'MonthlyReportsToolStripMenuItem
-        '
-        Me.MonthlyReportsToolStripMenuItem.Name = "MonthlyReportsToolStripMenuItem"
-        Me.MonthlyReportsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.MonthlyReportsToolStripMenuItem.Text = "Monthly Reports"
-        '
         'DailyReportsToolStripMenuItem
         '
         Me.DailyReportsToolStripMenuItem.Name = "DailyReportsToolStripMenuItem"
-        Me.DailyReportsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.DailyReportsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.DailyReportsToolStripMenuItem.Text = "Daily Reports"
+        '
+        'MonthlyReportsToolStripMenuItem
+        '
+        Me.MonthlyReportsToolStripMenuItem.Name = "MonthlyReportsToolStripMenuItem"
+        Me.MonthlyReportsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.MonthlyReportsToolStripMenuItem.Text = "Monthly Reports"
+        '
+        'OrderReportToolStripMenuItem
+        '
+        Me.OrderReportToolStripMenuItem.Name = "OrderReportToolStripMenuItem"
+        Me.OrderReportToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.OrderReportToolStripMenuItem.Text = "Order Report"
+        '
+        'PaymentsReportToolStripMenuItem
+        '
+        Me.PaymentsReportToolStripMenuItem.Name = "PaymentsReportToolStripMenuItem"
+        Me.PaymentsReportToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.PaymentsReportToolStripMenuItem.Text = "Payments Report"
         '
         'SETTINGSToolStripMenuItem
         '
@@ -228,7 +281,7 @@ Partial Class frmMain
         'SMSSettingsToolStripMenuItem
         '
         Me.SMSSettingsToolStripMenuItem.Name = "SMSSettingsToolStripMenuItem"
-        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.SMSSettingsToolStripMenuItem.Text = "SMS Settings"
         '
         'SMSTemplateToolStripMenuItem
@@ -249,13 +302,13 @@ Partial Class frmMain
         'ViewHelpToolStripMenuItem
         '
         Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ViewHelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'imgBottom1
@@ -305,59 +358,6 @@ Partial Class frmMain
         Me.panelMain.Name = "panelMain"
         Me.panelMain.Size = New System.Drawing.Size(788, 276)
         Me.panelMain.TabIndex = 56
-        '
-        'OrderPendingToolStripMenuItem
-        '
-        Me.OrderPendingToolStripMenuItem.Name = "OrderPendingToolStripMenuItem"
-        Me.OrderPendingToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.OrderPendingToolStripMenuItem.Text = "Order and Pending"
-        '
-        'PaymentPendingToolStripMenuItem
-        '
-        Me.PaymentPendingToolStripMenuItem.Name = "PaymentPendingToolStripMenuItem"
-        Me.PaymentPendingToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.PaymentPendingToolStripMenuItem.Text = "Payments and Pending"
-        '
-        'ClosingBulananToolStripMenuItem
-        '
-        Me.ClosingBulananToolStripMenuItem.Name = "ClosingBulananToolStripMenuItem"
-        Me.ClosingBulananToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.ClosingBulananToolStripMenuItem.Text = "Closing Bulanan"
-        '
-        'GantiPeriodeToolStripMenuItem
-        '
-        Me.GantiPeriodeToolStripMenuItem.Name = "GantiPeriodeToolStripMenuItem"
-        Me.GantiPeriodeToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.GantiPeriodeToolStripMenuItem.Text = "Ganti Periode"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(165, 6)
-        '
-        'OrderReportToolStripMenuItem
-        '
-        Me.OrderReportToolStripMenuItem.Name = "OrderReportToolStripMenuItem"
-        Me.OrderReportToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.OrderReportToolStripMenuItem.Text = "Order Report"
-        '
-        'PaymentsReportToolStripMenuItem
-        '
-        Me.PaymentsReportToolStripMenuItem.Name = "PaymentsReportToolStripMenuItem"
-        Me.PaymentsReportToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.PaymentsReportToolStripMenuItem.Text = "Payments Report"
-        '
-        'AdministratorLogsToolStripMenuItem
-        '
-        Me.AdministratorLogsToolStripMenuItem.Name = "AdministratorLogsToolStripMenuItem"
-        Me.AdministratorLogsToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.AdministratorLogsToolStripMenuItem.Text = "Activity Logs"
-        '
-        'UserManagementToolStripMenuItem1
-        '
-        Me.UserManagementToolStripMenuItem1.Name = "UserManagementToolStripMenuItem1"
-        Me.UserManagementToolStripMenuItem1.Size = New System.Drawing.Size(196, 22)
-        Me.UserManagementToolStripMenuItem1.Text = "Users Management"
         '
         'frmMain
         '

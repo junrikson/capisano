@@ -45,6 +45,10 @@
 
     Private Sub frmServerSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         timerShow.Start()
+        txtServer.Text = frmMain.localServerAdress
+        txtUsername.Text = frmMain.localServerUsername
+        txtPassword.Text = frmMain.localServerPassword
+        txtDatabase.Text = frmMain.localDatabaseName
     End Sub
 
     Private Sub timerShow_Tick(sender As Object, e As EventArgs) Handles timerShow.Tick
@@ -57,5 +61,13 @@
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        My.Computer.FileSystem.WriteAllText("config.cfg", "#Local Server Host" + vbCrLf + txtServer.Text + vbCrLf + txtUsername.Text + vbCrLf + txtPassword.Text + vbCrLf + txtDatabase.Text + vbCrLf, False)
+        frmMain.localServerAdress = txtServer.Text
+        frmMain.localServerUsername = txtUsername.Text
+        frmMain.localServerPassword = txtPassword.Text
+        frmMain.localDatabaseName = txtDatabase.Text
     End Sub
 End Class

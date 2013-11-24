@@ -1,4 +1,14 @@
-﻿Public Class frmMain
+﻿Imports MySql.Data.MySqlClient
+Public Class frmMain
+    'Load Config
+    Public Shared cfg As String = My.Computer.FileSystem.ReadAllText("config.cfg")
+    Public Shared config As String() = cfg.Split(New Char() {vbCrLf})
+    Public Shared localServerAdress As String = config(1).Substring(1, config(1).Length - 1)
+    Public Shared localServerUsername As String = config(2).Substring(1, config(2).Length - 1)
+    Public Shared localServerPassword As String = config(3).Substring(1, config(3).Length - 1)
+    Public Shared localDatabaseName As String = config(4).Substring(1, config(4).Length - 1)
+    Public Shared localConnection As New MySqlConnection("server=" + localServerAdress + "; user id=" + localServerUsername + "; password=" + localServerPassword + "; database=" + localDatabaseName)
+
     'fungsi untuk drag form
     Dim IsDraggingForm As Boolean = False
     Private MousePos As New System.Drawing.Point(0, 0)

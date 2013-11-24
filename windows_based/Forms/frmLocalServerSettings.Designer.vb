@@ -76,7 +76,6 @@ Partial Class frmLocalServerSettings
         Me.txtDatabase.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDatabase.Location = New System.Drawing.Point(106, 142)
         Me.txtDatabase.Name = "txtDatabase"
-        Me.txtDatabase.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtDatabase.Size = New System.Drawing.Size(327, 21)
         Me.txtDatabase.TabIndex = 46
         '
@@ -87,6 +86,7 @@ Partial Class frmLocalServerSettings
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(327, 21)
         Me.txtPassword.TabIndex = 45
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'Label6
         '

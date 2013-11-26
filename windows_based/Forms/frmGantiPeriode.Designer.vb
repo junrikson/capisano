@@ -23,10 +23,8 @@ Partial Class frmGantiPeriode
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.dateClosing = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Button3
@@ -38,32 +36,6 @@ Partial Class frmGantiPeriode
         Me.Button3.Text = "Change"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(246, 10)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(25, 23)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = ">"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(215, 10)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(25, 23)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "<"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(67, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(142, 20)
-        Me.TextBox1.TabIndex = 6
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -73,15 +45,26 @@ Partial Class frmGantiPeriode
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Periode :"
         '
+        'dateClosing
+        '
+        Me.dateClosing.CustomFormat = "MMMM yyyy"
+        Me.dateClosing.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateClosing.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dateClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dateClosing.Location = New System.Drawing.Point(67, 12)
+        Me.dateClosing.Name = "dateClosing"
+        Me.dateClosing.ShowUpDown = True
+        Me.dateClosing.Size = New System.Drawing.Size(200, 20)
+        Me.dateClosing.TabIndex = 10
+        Me.dateClosing.Value = New Date(2014, 1, 1, 0, 0, 0, 0)
+        '
         'frmGantiPeriode
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(288, 75)
+        Me.Controls.Add(Me.dateClosing)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmGantiPeriode"
@@ -92,8 +75,6 @@ Partial Class frmGantiPeriode
 
     End Sub
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents dateClosing As System.Windows.Forms.DateTimePicker
 End Class

@@ -32,9 +32,13 @@ Partial Class frmActivityLog
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(13, 42)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(461, 315)
         Me.DataGridView1.TabIndex = 0
         '
@@ -56,7 +60,7 @@ Partial Class frmActivityLog
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(13, 364)
+        Me.Button2.Location = New System.Drawing.Point(487, 334)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 3
@@ -65,7 +69,7 @@ Partial Class frmActivityLog
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(94, 364)
+        Me.Button3.Location = New System.Drawing.Point(568, 334)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 4
@@ -76,7 +80,7 @@ Partial Class frmActivityLog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(486, 398)
+        Me.ClientSize = New System.Drawing.Size(767, 371)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

@@ -3,8 +3,8 @@ Public Class frmUsersManagement
     Dim cmd As MySqlCommand
     Private Function refreshData()
         Try
-            functions.connect()
-            cmd = New MySqlCommand("Select username as Username, password as Password, priv_a1 as 'Kat. Item', priv_a2 as 'Dftr. Item', priv_a3 as 'Kat. Menu', priv_a4 as 'Kat. Menu', priv_b1 as 'Orders', priv_b2 as 'Payments', priv_b3 as 'User Manage', priv_b4 as 'Log', priv_b5 as Closing, priv_b6 as Periode, priv_c1 as Reports, priv_d1 as 'Server Set', priv_d2 as 'SMS Set', priv_d3 as 'SMS Temp.', priv_d1 as Help from user", frmMain.localConnection)
+            functions.localConnect()
+            cmd = New MySqlCommand("Select username as Username, password as Password, priv_a1 as 'Kat. Item', priv_a2 as 'Dftr. Item', priv_a3 as 'Kat. Menu', priv_a4 as 'Kat. Menu', priv_b1 as 'Orders', priv_b2 as 'Payments', priv_b3 as 'User Manage', priv_b4 as 'Log', priv_b5 as Closing, priv_b6 as Periode, priv_c1 as Reports, priv_d1 as 'Server Set', priv_d2 as 'SMS Set', priv_d3 as 'SMS Temp.', priv_d1 as Help from user", functions.localConnection)
             Dim da = New MySqlDataAdapter(cmd)
             Dim dt = New DataTable()
             da.Fill(dt)
@@ -34,9 +34,9 @@ Public Class frmUsersManagement
             btnUpdate.Enabled = False
         Else
             Try
-                functions.connect()
+                functions.localConnect()
                 cmd = New MySqlCommand
-                cmd.Connection = frmMain.localConnection
+                cmd.Connection = functions.localConnection
                 cmd.CommandType = CommandType.Text
 
                 cmd.CommandText = "insert into user (username, password, priv_a1, priv_a2, priv_a3, priv_a4, priv_b1, priv_b2, priv_b3, priv_b4, priv_b5, priv_b6, priv_c1, priv_d1, priv_d2, priv_d3, priv_e1) VALUES ('" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + a1.Text + "', '" + a2.Text + "', '" + a3.Text + "', '" + a4.Text + "', '" + b1.Text + "', '" + b2.Text + "', '" + b3.Text + "', '" + b4.Text + "', '" + b5.Text + "', '" + b6.Text + "', '" + c.Text + "', '" + d1.Text + "', '" + d2.Text + "', '" + d3.Text + "', '" + f.Text + "');"
@@ -52,9 +52,9 @@ Public Class frmUsersManagement
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Try
-            functions.connect()
+            functions.localConnect()
             cmd = New MySqlCommand
-            cmd.Connection = frmMain.localConnection
+            cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
 
             cmd.CommandText = "delete from user where username = '" & txtUsername.Text & "'"
@@ -71,13 +71,13 @@ Public Class frmUsersManagement
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Try
-            functions.connect()
+            functions.localConnect()
             cmd = New MySqlCommand
-            cmd.Connection = frmMain.localConnection
+            cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
             cmd.CommandText = "update user set password = '" + txtPassword.Text + "', priv_a1='" + a1.Text + "', priv_a2='" + a2.Text + "', priv_a3='" + a3.Text + "', priv_a4='" + a4.Text + "', priv_b1='" + b1.Text + "', priv_b2='" + b2.Text + "', priv_b3='" + b3.Text + "', priv_b4='" + b4.Text + "', priv_b5='" + b5.Text + "', priv_b6='" + b6.Text + "', priv_c1='" + c.Text + "', priv_d1='" + d1.Text + "', priv_d2='" + d2.Text + "', priv_d3='" + d3.Text + "', priv_e1='" + f.Text + "' where username = '" + txtUsername.Text + "'"
             cmd.ExecuteNonQuery()
-            frmMain.localConnection.Close()
+            functions.localConnection.Close()
             btnAdd.Text = "Copy"
             btnUpdate.Enabled = False
             refreshData()

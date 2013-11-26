@@ -22,85 +22,89 @@ Partial Class frmDaftarKategoriMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnRefresh = New System.Windows.Forms.Button()
+        Me.gridList = New System.Windows.Forms.DataGridView()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txtDetails = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button4
+        'btnUpdate
         '
-        Me.Button4.Location = New System.Drawing.Point(133, 355)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 40
-        Me.Button4.Text = "Update"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(133, 355)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 40
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtSearch
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 12)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(247, 20)
-        Me.TextBox3.TabIndex = 39
+        Me.txtSearch.Location = New System.Drawing.Point(12, 12)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(247, 20)
+        Me.txtSearch.TabIndex = 39
         '
-        'Button5
+        'btnRefresh
         '
-        Me.Button5.Location = New System.Drawing.Point(265, 10)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 38
-        Me.Button5.Text = "Refresh"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnRefresh.Location = New System.Drawing.Point(265, 10)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnRefresh.TabIndex = 38
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'gridList
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 38)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(328, 197)
-        Me.DataGridView1.TabIndex = 37
+        Me.gridList.AllowUserToAddRows = False
+        Me.gridList.AllowUserToDeleteRows = False
+        Me.gridList.AllowUserToOrderColumns = True
+        Me.gridList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridList.Location = New System.Drawing.Point(12, 38)
+        Me.gridList.Name = "gridList"
+        Me.gridList.ReadOnly = True
+        Me.gridList.Size = New System.Drawing.Size(328, 197)
+        Me.gridList.TabIndex = 37
         '
-        'Button2
+        'btnDelete
         '
-        Me.Button2.Location = New System.Drawing.Point(214, 355)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 36
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(214, 355)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 36
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.Location = New System.Drawing.Point(52, 355)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.Location = New System.Drawing.Point(52, 355)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 35
+        Me.btnAdd.Text = "Save"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(65, 269)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(275, 20)
-        Me.TextBox2.TabIndex = 34
+        Me.txtName.Location = New System.Drawing.Point(65, 269)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(275, 20)
+        Me.txtName.TabIndex = 34
         '
-        'TextBox1
+        'txtCode
         '
-        Me.TextBox1.Location = New System.Drawing.Point(65, 243)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 33
+        Me.txtCode.Location = New System.Drawing.Point(65, 243)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 33
         '
         'Label2
         '
@@ -120,13 +124,13 @@ Partial Class frmDaftarKategoriMenu
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Code :"
         '
-        'RichTextBox1
+        'txtDetails
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(65, 295)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(275, 51)
-        Me.RichTextBox1.TabIndex = 50
-        Me.RichTextBox1.Text = ""
+        Me.txtDetails.Location = New System.Drawing.Point(65, 295)
+        Me.txtDetails.Name = "txtDetails"
+        Me.txtDetails.Size = New System.Drawing.Size(275, 51)
+        Me.txtDetails.TabIndex = 50
+        Me.txtDetails.Text = ""
         '
         'Label6
         '
@@ -142,35 +146,36 @@ Partial Class frmDaftarKategoriMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(357, 390)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.txtDetails)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.btnRefresh)
+        Me.Controls.Add(Me.gridList)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmDaftarKategoriMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Daftar Kategori Menu"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents gridList As System.Windows.Forms.DataGridView
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents txtDetails As System.Windows.Forms.RichTextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

@@ -1,12 +1,15 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmDaftarKategoriItem
     Dim cmd As MySqlCommand
+    Dim modul As String = "DFTKITEM"
+    Dim da As MySqlDataAdapter
+    Dim dt As DataTable
     Private Function refreshData()
         Try
-            functions.connect()
-            cmd = New MySqlCommand("Select code as Code, name as Name, details as Details, timestamp as Time from daftarkategoriitem", frmMain.localConnection)
-            Dim da = New MySqlDataAdapter(cmd)
-            Dim dt = New DataTable()
+            functions.localConnect()
+            cmd = New MySqlCommand("Select code as Code, name as Name, details as Details, timestamp as Time, operator as Operator from daftarkategoriitem", functions.localConnection)
+            da = New MySqlDataAdapter(cmd)
+            dt = New DataTable()
             da.Fill(dt)
             gridList.DataSource = dt
         Catch ex As Exception
@@ -19,6 +22,7 @@ Public Class frmDaftarKategoriItem
         btnDelete.Enabled = False
         btnUpdate.Enabled = False
         refreshData()
+        kriteria = gridList.Columns(0).Name
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
@@ -26,22 +30,27 @@ Public Class frmDaftarKategoriItem
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If (btnAdd.Text = "Copy") Then
+        If (btnAdd.Text = "Add") Then
             txtCode.Text = ""
             txtCode.Enabled = True
-            btnAdd.Text = "Add"
+            btnAdd.Text = "Save"
             btnUpdate.Enabled = False
+            btnDelete.Enabled = False
         Else
             Try
-                functions.connect()
+                functions.localConnect()
                 cmd = New MySqlCommand
-                cmd.Connection = frmMain.localConnection
+                cmd.Connection = functions.localConnection
                 cmd.CommandType = CommandType.Text
 
-                cmd.CommandText = "insert into daftarkategoriitem (code, name, details) VALUES ('" + txtCode.Text + "', '" + txtName.Text + "', '" + txtDetails.Text + "');"
+                cmd.CommandText = "insert into daftarkategoriitem (code, name, details, operator, modul) VALUES ('" + txtCode.Text + "', '" + txtName.Text + "', '" + txtDetails.Text + "', '" + variabels.oper + "', '" + modul + "');"
                 cmd.ExecuteNonQuery()
 
                 txtCode.Enabled = True
+                txtCode.Text = ""
+                btnUpdate.Enabled = False
+                btnDelete.Enabled = False
+
                 refreshData()
             Catch ex As MySqlException
                 MessageBox.Show(ex.ToString)
@@ -51,17 +60,20 @@ Public Class frmDaftarKategoriItem
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Try
-            functions.connect()
+            functions.localConnect()
             cmd = New MySqlCommand
-            cmd.Connection = frmMain.localConnection
+            cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
 
             cmd.CommandText = "delete from daftarkategoriitem where code = '" & txtCode.Text & "'"
             cmd.ExecuteNonQuery()
+
             btnDelete.Enabled = False
             btnUpdate.Enabled = False
+            txtCode.Text = ""
             txtCode.Enabled = True
-            btnAdd.Text = "Add"
+            btnAdd.Text = "Save"
+
             refreshData()
         Catch ex As MySqlException
             MessageBox.Show(ex.ToString)
@@ -70,31 +82,39 @@ Public Class frmDaftarKategoriItem
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Try
-            functions.connect()
+            functions.localConnect()
             cmd = New MySqlCommand
-            cmd.Connection = frmMain.localConnection
+            cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "update daftarkategoriitem set name = '" + txtName.Text + "', details='" + txtDetails.Text + "' where code = '" + txtCode.Text + "'"
+            cmd.CommandText = "update daftarkategoriitem set name = '" + txtName.Text + "', details='" + txtDetails.Text + "', operator='" + variabels.oper + "' where code = '" + txtCode.Text + "'"
             cmd.ExecuteNonQuery()
-            frmMain.localConnection.Close()
-            btnAdd.Text = "Copy"
-            btnUpdate.Enabled = False
+            btnAdd.Text = "Add"
             refreshData()
         Catch ex As MySqlException
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
 
-    Dim i As Integer
+    Dim i As Integer = 0
+    Dim k As Integer = 0
     Private Sub gridList_Click(sender As Object, e As EventArgs) Handles gridList.Click
-        btnAdd.Text = "Copy"
+        btnAdd.Text = "Add"
         btnUpdate.Enabled = True
         btnDelete.Enabled = True
         btnAdd.Enabled = True
         txtCode.Enabled = False
         i = gridList.CurrentRow.Index
+        k = gridList.CurrentCell.ColumnIndex
+        kriteria = gridList.Columns(k).Name
         txtCode.Text = gridList.Item(0, i).Value
         txtName.Text = gridList.Item(1, i).Value
         txtDetails.Text = gridList.Item(2, i).Value
+    End Sub
+
+    Dim kriteria As String = ""
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Dim dv = New DataView(dt)
+        dv.RowFilter = kriteria + " like '%" + txtSearch.Text + "%'"
+        gridList.DataSource = dv
     End Sub
 End Class

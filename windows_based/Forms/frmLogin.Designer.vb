@@ -32,6 +32,7 @@ Partial Class frmLogin
         Me.btnServerSettings = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,7 +40,6 @@ Partial Class frmLogin
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.timerShow = New System.Windows.Forms.Timer(Me.components)
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +73,7 @@ Partial Class frmLogin
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(240, 27)
         Me.txtPassword.TabIndex = 1
+        Me.txtPassword.Text = "admin"
         '
         'txtUsername
         '
@@ -81,6 +82,7 @@ Partial Class frmLogin
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(240, 27)
         Me.txtUsername.TabIndex = 0
+        Me.txtUsername.Text = "admin"
         '
         'PictureBox1
         '
@@ -121,6 +123,17 @@ Partial Class frmLogin
         Me.ShapeContainer1.Size = New System.Drawing.Size(438, 302)
         Me.ShapeContainer1.TabIndex = 49
         Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape2
+        '
+        Me.LineShape2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LineShape2.BorderWidth = 10
+        Me.LineShape2.Enabled = False
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 0
+        Me.LineShape2.X2 = 441
+        Me.LineShape2.Y1 = 4
+        Me.LineShape2.Y2 = 4
         '
         'LineShape1
         '
@@ -191,17 +204,6 @@ Partial Class frmLogin
         'timerShow
         '
         Me.timerShow.Interval = 10
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LineShape2.BorderWidth = 10
-        Me.LineShape2.Enabled = False
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 0
-        Me.LineShape2.X2 = 441
-        Me.LineShape2.Y1 = 4
-        Me.LineShape2.Y2 = 4
         '
         'frmLogin
         '

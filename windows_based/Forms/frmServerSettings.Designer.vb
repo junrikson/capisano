@@ -33,20 +33,20 @@ Partial Class frmServerSettings
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSaveLocal = New System.Windows.Forms.Button()
+        Me.btnSaveWeb = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtDatabaseWeb = New System.Windows.Forms.TextBox()
+        Me.txtPasswordWeb = New System.Windows.Forms.TextBox()
+        Me.txtUsernameWeb = New System.Windows.Forms.TextBox()
+        Me.txtServerWeb = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.chkAuto = New System.Windows.Forms.CheckBox()
+        Me.txtInterval = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -138,23 +138,23 @@ Partial Class frmServerSettings
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Local Server Settings"
         '
-        'Button1
+        'btnSaveLocal
         '
-        Me.Button1.Location = New System.Drawing.Point(19, 152)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 52
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSaveLocal.Location = New System.Drawing.Point(19, 152)
+        Me.btnSaveLocal.Name = "btnSaveLocal"
+        Me.btnSaveLocal.Size = New System.Drawing.Size(75, 23)
+        Me.btnSaveLocal.TabIndex = 52
+        Me.btnSaveLocal.Text = "Save"
+        Me.btnSaveLocal.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSaveWeb
         '
-        Me.Button2.Location = New System.Drawing.Point(19, 352)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 62
-        Me.Button2.Text = "Save"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSaveWeb.Location = New System.Drawing.Point(19, 352)
+        Me.btnSaveWeb.Name = "btnSaveWeb"
+        Me.btnSaveWeb.Size = New System.Drawing.Size(75, 23)
+        Me.btnSaveWeb.TabIndex = 62
+        Me.btnSaveWeb.Text = "Save"
+        Me.btnSaveWeb.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -196,44 +196,44 @@ Partial Class frmServerSettings
         Me.Label8.TabIndex = 57
         Me.Label8.Text = "Server :"
         '
-        'TextBox1
+        'txtDatabaseWeb
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(98, 287)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(327, 21)
-        Me.TextBox1.TabIndex = 56
+        Me.txtDatabaseWeb.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDatabaseWeb.Location = New System.Drawing.Point(98, 287)
+        Me.txtDatabaseWeb.Name = "txtDatabaseWeb"
+        Me.txtDatabaseWeb.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtDatabaseWeb.Size = New System.Drawing.Size(327, 21)
+        Me.txtDatabaseWeb.TabIndex = 56
         '
-        'TextBox2
+        'txtPasswordWeb
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(98, 264)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(327, 21)
-        Me.TextBox2.TabIndex = 55
+        Me.txtPasswordWeb.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPasswordWeb.Location = New System.Drawing.Point(98, 264)
+        Me.txtPasswordWeb.Name = "txtPasswordWeb"
+        Me.txtPasswordWeb.Size = New System.Drawing.Size(327, 21)
+        Me.txtPasswordWeb.TabIndex = 55
         '
-        'TextBox3
+        'txtUsernameWeb
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(98, 242)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(327, 21)
-        Me.TextBox3.TabIndex = 54
+        Me.txtUsernameWeb.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsernameWeb.Location = New System.Drawing.Point(98, 242)
+        Me.txtUsernameWeb.Name = "txtUsernameWeb"
+        Me.txtUsernameWeb.Size = New System.Drawing.Size(327, 21)
+        Me.txtUsernameWeb.TabIndex = 54
         '
-        'TextBox4
+        'txtServerWeb
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(98, 220)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(327, 21)
-        Me.TextBox4.TabIndex = 53
+        Me.txtServerWeb.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtServerWeb.Location = New System.Drawing.Point(98, 220)
+        Me.txtServerWeb.Name = "txtServerWeb"
+        Me.txtServerWeb.Size = New System.Drawing.Size(327, 21)
+        Me.txtServerWeb.TabIndex = 53
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.CheckBox1)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
+        Me.GroupBox2.Controls.Add(Me.chkAuto)
+        Me.GroupBox2.Controls.Add(Me.txtInterval)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(19, 196)
         Me.GroupBox2.Name = "GroupBox2"
@@ -241,26 +241,6 @@ Partial Class frmServerSettings
         Me.GroupBox2.TabIndex = 61
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Web Server Settings"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(79, 116)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox5.Size = New System.Drawing.Size(95, 21)
-        Me.TextBox5.TabIndex = 63
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(8, 118)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(67, 17)
-        Me.CheckBox1.TabIndex = 64
-        Me.CheckBox1.Text = "Interval :"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -271,6 +251,26 @@ Partial Class frmServerSettings
         Me.Label9.Size = New System.Drawing.Size(30, 13)
         Me.Label9.TabIndex = 63
         Me.Label9.Text = "detik"
+        '
+        'chkAuto
+        '
+        Me.chkAuto.AutoSize = True
+        Me.chkAuto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAuto.Location = New System.Drawing.Point(8, 118)
+        Me.chkAuto.Name = "chkAuto"
+        Me.chkAuto.Size = New System.Drawing.Size(67, 17)
+        Me.chkAuto.TabIndex = 64
+        Me.chkAuto.Text = "Interval :"
+        Me.chkAuto.UseVisualStyleBackColor = True
+        '
+        'txtInterval
+        '
+        Me.txtInterval.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInterval.Location = New System.Drawing.Point(79, 116)
+        Me.txtInterval.Name = "txtInterval"
+        Me.txtInterval.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtInterval.Size = New System.Drawing.Size(95, 21)
+        Me.txtInterval.TabIndex = 63
         '
         'Button3
         '
@@ -287,17 +287,17 @@ Partial Class frmServerSettings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(464, 386)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnSaveWeb)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtDatabaseWeb)
+        Me.Controls.Add(Me.txtPasswordWeb)
+        Me.Controls.Add(Me.txtUsernameWeb)
+        Me.Controls.Add(Me.txtServerWeb)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSaveLocal)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
@@ -307,9 +307,10 @@ Partial Class frmServerSettings
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.txtServer)
         Me.Controls.Add(Me.GroupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmServerSettings"
         Me.Opacity = 0.0R
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Server Settings"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -327,19 +328,19 @@ Partial Class frmServerSettings
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnSaveLocal As System.Windows.Forms.Button
+    Friend WithEvents btnSaveWeb As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtDatabaseWeb As System.Windows.Forms.TextBox
+    Friend WithEvents txtPasswordWeb As System.Windows.Forms.TextBox
+    Friend WithEvents txtUsernameWeb As System.Windows.Forms.TextBox
+    Friend WithEvents txtServerWeb As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents chkAuto As System.Windows.Forms.CheckBox
+    Friend WithEvents txtInterval As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

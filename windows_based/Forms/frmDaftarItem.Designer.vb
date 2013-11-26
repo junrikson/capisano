@@ -22,59 +22,60 @@ Partial Class frmDaftarItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.gridList = New System.Windows.Forms.DataGridView()
+        Me.btnRefresh = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.imageItem = New System.Windows.Forms.PictureBox()
+        Me.btnBrowseImage = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.comboCategory = New System.Windows.Forms.ComboBox()
+        Me.txtDetails = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtImages = New System.Windows.Forms.TextBox()
+        CType(Me.gridList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imageItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button2
+        'btnDelete
         '
-        Me.Button2.Location = New System.Drawing.Point(207, 410)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(207, 410)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 17
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.Location = New System.Drawing.Point(45, 410)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.Location = New System.Drawing.Point(45, 410)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 16
+        Me.btnAdd.Text = "Save"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(65, 269)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(275, 20)
-        Me.TextBox2.TabIndex = 14
+        Me.txtName.Location = New System.Drawing.Point(65, 269)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(275, 20)
+        Me.txtName.TabIndex = 14
         '
-        'TextBox1
+        'txtCode
         '
-        Me.TextBox1.Location = New System.Drawing.Point(65, 243)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 13
+        Me.txtCode.Location = New System.Drawing.Point(65, 243)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 13
         '
         'Label3
         '
@@ -103,63 +104,70 @@ Partial Class frmDaftarItem
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Code :"
         '
-        'DataGridView1
+        'gridList
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 38)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(496, 197)
-        Me.DataGridView1.TabIndex = 20
+        Me.gridList.AllowUserToAddRows = False
+        Me.gridList.AllowUserToDeleteRows = False
+        Me.gridList.AllowUserToOrderColumns = True
+        Me.gridList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridList.Location = New System.Drawing.Point(12, 38)
+        Me.gridList.Name = "gridList"
+        Me.gridList.ReadOnly = True
+        Me.gridList.Size = New System.Drawing.Size(496, 197)
+        Me.gridList.TabIndex = 20
         '
-        'Button5
+        'btnRefresh
         '
-        Me.Button5.Location = New System.Drawing.Point(433, 9)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 21
-        Me.Button5.Text = "Refresh"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnRefresh.Location = New System.Drawing.Point(433, 9)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnRefresh.TabIndex = 21
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtSearch
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 12)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(415, 20)
-        Me.TextBox3.TabIndex = 22
+        Me.txtSearch.Location = New System.Drawing.Point(12, 12)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(415, 20)
+        Me.txtSearch.TabIndex = 22
         '
-        'PictureBox1
+        'imageItem
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(352, 243)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(156, 156)
-        Me.PictureBox1.TabIndex = 23
-        Me.PictureBox1.TabStop = False
+        Me.imageItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.imageItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imageItem.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.imageItem.Location = New System.Drawing.Point(352, 243)
+        Me.imageItem.Name = "imageItem"
+        Me.imageItem.Size = New System.Drawing.Size(156, 156)
+        Me.imageItem.TabIndex = 23
+        Me.imageItem.TabStop = False
         '
-        'Button3
+        'btnBrowseImage
         '
-        Me.Button3.Location = New System.Drawing.Point(385, 410)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(84, 23)
-        Me.Button3.TabIndex = 25
-        Me.Button3.Text = "Browse Image"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnBrowseImage.Location = New System.Drawing.Point(453, 410)
+        Me.btnBrowseImage.Name = "btnBrowseImage"
+        Me.btnBrowseImage.Size = New System.Drawing.Size(55, 23)
+        Me.btnBrowseImage.TabIndex = 25
+        Me.btnBrowseImage.Text = "Browse"
+        Me.btnBrowseImage.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnUpdate
         '
-        Me.Button4.Location = New System.Drawing.Point(126, 410)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 26
-        Me.Button4.Text = "Update"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(126, 410)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 26
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'txtPrice
         '
-        Me.TextBox5.Location = New System.Drawing.Point(65, 321)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 28
+        Me.txtPrice.Location = New System.Drawing.Point(65, 321)
+        Me.txtPrice.Name = "txtPrice"
+        Me.txtPrice.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrice.TabIndex = 28
+        Me.txtPrice.Text = "0"
         '
         'Label4
         '
@@ -170,21 +178,21 @@ Partial Class frmDaftarItem
         Me.Label4.TabIndex = 27
         Me.Label4.Text = "Price :"
         '
-        'ComboBox1
+        'comboCategory
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(65, 296)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
-        Me.ComboBox1.TabIndex = 29
+        Me.comboCategory.FormattingEnabled = True
+        Me.comboCategory.Location = New System.Drawing.Point(65, 296)
+        Me.comboCategory.Name = "comboCategory"
+        Me.comboCategory.Size = New System.Drawing.Size(100, 21)
+        Me.comboCategory.TabIndex = 29
         '
-        'RichTextBox1
+        'txtDetails
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(65, 348)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(273, 51)
-        Me.RichTextBox1.TabIndex = 50
-        Me.RichTextBox1.Text = ""
+        Me.txtDetails.Location = New System.Drawing.Point(65, 348)
+        Me.txtDetails.Name = "txtDetails"
+        Me.txtDetails.Size = New System.Drawing.Size(273, 51)
+        Me.txtDetails.TabIndex = 50
+        Me.txtDetails.Text = ""
         '
         'Label6
         '
@@ -195,53 +203,63 @@ Partial Class frmDaftarItem
         Me.Label6.TabIndex = 49
         Me.Label6.Text = "Details :"
         '
+        'txtImages
+        '
+        Me.txtImages.Location = New System.Drawing.Point(352, 412)
+        Me.txtImages.Name = "txtImages"
+        Me.txtImages.Size = New System.Drawing.Size(100, 20)
+        Me.txtImages.TabIndex = 51
+        '
         'frmDaftarItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(520, 445)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.txtImages)
+        Me.Controls.Add(Me.txtDetails)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.comboCategory)
+        Me.Controls.Add(Me.txtPrice)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnBrowseImage)
+        Me.Controls.Add(Me.imageItem)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.btnRefresh)
+        Me.Controls.Add(Me.gridList)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmDaftarItem"
-        Me.Text = "Form1"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Daftar Item"
+        CType(Me.gridList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imageItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents gridList As System.Windows.Forms.DataGridView
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents imageItem As System.Windows.Forms.PictureBox
+    Friend WithEvents btnBrowseImage As System.Windows.Forms.Button
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents txtPrice As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents comboCategory As System.Windows.Forms.ComboBox
+    Friend WithEvents txtDetails As System.Windows.Forms.RichTextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtImages As System.Windows.Forms.TextBox
 End Class

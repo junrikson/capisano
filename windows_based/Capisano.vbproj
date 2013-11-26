@@ -134,6 +134,12 @@
     <Compile Include="Forms\frmPaymentsAndPending.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmQueryDaftarMenuDetails.Designer.vb">
+      <DependentUpon>frmQueryDaftarMenuDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQueryDaftarMenuDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmServerSettings.Designer.vb">
       <DependentUpon>frmServerSettings.vb</DependentUpon>
     </Compile>
@@ -178,6 +184,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\functions.vb" />
+    <Compile Include="Modules\variabels.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -224,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPaymentsAndPending.resx">
       <DependentUpon>frmPaymentsAndPending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQueryDaftarMenuDetails.resx">
+      <DependentUpon>frmQueryDaftarMenuDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmServerSettings.resx">
       <DependentUpon>frmServerSettings.vb</DependentUpon>

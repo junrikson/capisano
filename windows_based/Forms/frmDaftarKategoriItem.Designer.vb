@@ -89,7 +89,7 @@ Partial Class frmDaftarKategoriItem
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 35
-        Me.btnAdd.Text = "Add"
+        Me.btnAdd.Text = "Save"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'txtName
@@ -159,6 +159,7 @@ Partial Class frmDaftarKategoriItem
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmDaftarKategoriItem"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Daftar Kategori Item"
         CType(Me.gridList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

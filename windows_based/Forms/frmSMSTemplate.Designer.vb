@@ -25,17 +25,16 @@ Partial Class frmSMSTemplate
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtCode = New System.Windows.Forms.TextBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.txtMessage = New System.Windows.Forms.RichTextBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnRefresh = New System.Windows.Forms.Button()
+        Me.gridList = New System.Windows.Forms.DataGridView()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        CType(Me.gridList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -65,109 +64,104 @@ Partial Class frmSMSTemplate
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Message :"
         '
-        'TextBox1
+        'txtCode
         '
-        Me.TextBox1.Location = New System.Drawing.Point(87, 220)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtCode.Location = New System.Drawing.Point(87, 220)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 3
         '
-        'TextBox2
+        'txtDescription
         '
-        Me.TextBox2.Location = New System.Drawing.Point(87, 246)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(353, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txtDescription.Location = New System.Drawing.Point(87, 246)
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.Size = New System.Drawing.Size(353, 20)
+        Me.txtDescription.TabIndex = 4
         '
-        'RichTextBox1
+        'txtMessage
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(87, 275)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(353, 96)
-        Me.RichTextBox1.TabIndex = 5
-        Me.RichTextBox1.Text = ""
+        Me.txtMessage.Location = New System.Drawing.Point(87, 275)
+        Me.txtMessage.Name = "txtMessage"
+        Me.txtMessage.Size = New System.Drawing.Size(353, 96)
+        Me.txtMessage.TabIndex = 5
+        Me.txtMessage.Text = ""
         '
-        'Button1
+        'txtSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(46, 393)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.txtSearch.Location = New System.Drawing.Point(12, 12)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(348, 20)
+        Me.txtSearch.TabIndex = 42
         '
-        'Button2
+        'btnRefresh
         '
-        Me.Button2.Location = New System.Drawing.Point(138, 393)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnRefresh.Location = New System.Drawing.Point(366, 10)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnRefresh.TabIndex = 41
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'Button3
+        'gridList
         '
-        Me.Button3.Location = New System.Drawing.Point(229, 393)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Next >>"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.gridList.AllowUserToAddRows = False
+        Me.gridList.AllowUserToDeleteRows = False
+        Me.gridList.AllowUserToOrderColumns = True
+        Me.gridList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridList.Location = New System.Drawing.Point(12, 38)
+        Me.gridList.Name = "gridList"
+        Me.gridList.ReadOnly = True
+        Me.gridList.Size = New System.Drawing.Size(429, 169)
+        Me.gridList.TabIndex = 40
         '
-        'Button4
+        'btnUpdate
         '
-        Me.Button4.Location = New System.Drawing.Point(320, 393)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "<< Previous"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(190, 391)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 45
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'btnDelete
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 12)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(348, 20)
-        Me.TextBox3.TabIndex = 42
+        Me.btnDelete.Location = New System.Drawing.Point(271, 391)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 44
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnAdd
         '
-        Me.Button5.Location = New System.Drawing.Point(366, 10)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 41
-        Me.Button5.Text = "Refresh"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 38)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(429, 169)
-        Me.DataGridView1.TabIndex = 40
+        Me.btnAdd.Location = New System.Drawing.Point(109, 391)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 43
+        Me.btnAdd.Text = "Save"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'frmSMSTemplate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(454, 436)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.btnRefresh)
+        Me.Controls.Add(Me.gridList)
+        Me.Controls.Add(Me.txtMessage)
+        Me.Controls.Add(Me.txtDescription)
+        Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmSMSTemplate"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SMS Template"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,14 +169,13 @@ Partial Class frmSMSTemplate
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents txtDescription As System.Windows.Forms.TextBox
+    Friend WithEvents txtMessage As System.Windows.Forms.RichTextBox
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents gridList As System.Windows.Forms.DataGridView
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
 End Class

@@ -22,6 +22,7 @@ Partial Class frmDaftarKategoriItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDaftarKategoriItem))
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnRefresh = New System.Windows.Forms.Button()
@@ -158,6 +159,7 @@ Partial Class frmDaftarKategoriItem
         Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDaftarKategoriItem"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Daftar Kategori Item"

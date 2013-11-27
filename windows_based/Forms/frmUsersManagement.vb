@@ -1,12 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmUsersManagement
     Dim cmd As MySqlCommand
+    Dim priv_a1, priv_a2, priv_a3, priv_a4, priv_b1, priv_b2, priv_b3, priv_b4, priv_b5, priv_b6, priv_c1, priv_d1, priv_d2, priv_d3, priv_e1 As Integer
+    Dim modul As String = "USERMNG"
+    Dim da As MySqlDataAdapter
+    Dim dt As DataTable
     Private Function refreshData()
         Try
             functions.localConnect()
-            cmd = New MySqlCommand("Select username as Username, password as Password, priv_a1 as 'Kat. Item', priv_a2 as 'Dftr. Item', priv_a3 as 'Kat. Menu', priv_a4 as 'Kat. Menu', priv_b1 as 'Orders', priv_b2 as 'Payments', priv_b3 as 'User Manage', priv_b4 as 'Log', priv_b5 as Closing, priv_b6 as Periode, priv_c1 as Reports, priv_d1 as 'Server Set', priv_d2 as 'SMS Set', priv_d3 as 'SMS Temp.', priv_d1 as Help from user", functions.localConnection)
-            Dim da = New MySqlDataAdapter(cmd)
-            Dim dt = New DataTable()
+            cmd = New MySqlCommand("Select username as Username, password as Password, priv_a1 as 'Kat. Item', priv_a2 as 'Dftr. Item', priv_a3 as 'Kat. Menu', priv_a4 as 'Kat. Menu', priv_b1 as 'Orders', priv_b2 as 'Payments', priv_b3 as 'User Manage', priv_b4 as 'Log', priv_b5 as Closing, priv_b6 as Periode, priv_c1 as Reports, priv_d1 as 'Server Set', priv_d2 as 'SMS Set', priv_d3 as 'SMS Temp.', priv_d1 as Help, timestamp as Time, operator as Operator, modul as Modul from user", functions.localConnection)
+            da = New MySqlDataAdapter(cmd)
+            dt = New DataTable()
             da.Fill(dt)
             gridList.DataSource = dt
         Catch ex As Exception
@@ -19,6 +23,7 @@ Public Class frmUsersManagement
         btnDelete.Enabled = False
         btnUpdate.Enabled = False
         refreshData()
+        kriteria = gridList.Columns(0).Name
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
@@ -26,12 +31,13 @@ Public Class frmUsersManagement
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If (btnAdd.Text = "Copy") Then
+        setVariabel()
+        If (btnAdd.Text = "Add") Then
             txtUsername.Text = ""
-            txtPassword.Text = ""
             txtUsername.Enabled = True
-            btnAdd.Text = "Add"
+            btnAdd.Text = "Save"
             btnUpdate.Enabled = False
+            btnDelete.Enabled = False
         Else
             Try
                 functions.localConnect()
@@ -39,10 +45,14 @@ Public Class frmUsersManagement
                 cmd.Connection = functions.localConnection
                 cmd.CommandType = CommandType.Text
 
-                cmd.CommandText = "insert into user (username, password, priv_a1, priv_a2, priv_a3, priv_a4, priv_b1, priv_b2, priv_b3, priv_b4, priv_b5, priv_b6, priv_c1, priv_d1, priv_d2, priv_d3, priv_e1) VALUES ('" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + a1.Text + "', '" + a2.Text + "', '" + a3.Text + "', '" + a4.Text + "', '" + b1.Text + "', '" + b2.Text + "', '" + b3.Text + "', '" + b4.Text + "', '" + b5.Text + "', '" + b6.Text + "', '" + c.Text + "', '" + d1.Text + "', '" + d2.Text + "', '" + d3.Text + "', '" + f.Text + "');"
+                cmd.CommandText = "insert into user (username, password, priv_a1, priv_a2, priv_a3, priv_a4, priv_b1, priv_b2, priv_b3, priv_b4, priv_b5, priv_b6, priv_c1, priv_d1, priv_d2, priv_d3, priv_e1, operator, modul) VALUES ('" & txtUsername.Text & "', '" & txtPassword.Text & "', '" & priv_a1 & "', '" & priv_a2 & "', '" & priv_a3 & "', '" & priv_a4 & "', '" & priv_b1 & "', '" & priv_b2 & "', '" & priv_b3 & "', '" & priv_b4 & "', '" & priv_b5 & "', '" & priv_b6 & "', '" & priv_c1 & "', '" & priv_d1 & "', '" & priv_d2 & "', '" & priv_d3 & "', '" & priv_e1 & "', '" & variabels.oper & "', '" & modul & "');"
                 cmd.ExecuteNonQuery()
 
                 txtUsername.Enabled = True
+                txtUsername.Text = ""
+                btnUpdate.Enabled = False
+                btnDelete.Enabled = False
+
                 refreshData()
             Catch ex As MySqlException
                 MessageBox.Show(ex.ToString)
@@ -59,10 +69,13 @@ Public Class frmUsersManagement
 
             cmd.CommandText = "delete from user where username = '" & txtUsername.Text & "'"
             cmd.ExecuteNonQuery()
+            
             btnDelete.Enabled = False
             btnUpdate.Enabled = False
+            txtUsername.Text = ""
             txtUsername.Enabled = True
-            btnAdd.Text = "Add"
+            btnAdd.Text = "Save"
+
             refreshData()
         Catch ex As MySqlException
             MessageBox.Show(ex.ToString)
@@ -70,16 +83,15 @@ Public Class frmUsersManagement
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        setVariabel()
         Try
             functions.localConnect()
             cmd = New MySqlCommand
             cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "update user set password = '" + txtPassword.Text + "', priv_a1='" + a1.Text + "', priv_a2='" + a2.Text + "', priv_a3='" + a3.Text + "', priv_a4='" + a4.Text + "', priv_b1='" + b1.Text + "', priv_b2='" + b2.Text + "', priv_b3='" + b3.Text + "', priv_b4='" + b4.Text + "', priv_b5='" + b5.Text + "', priv_b6='" + b6.Text + "', priv_c1='" + c.Text + "', priv_d1='" + d1.Text + "', priv_d2='" + d2.Text + "', priv_d3='" + d3.Text + "', priv_e1='" + f.Text + "' where username = '" + txtUsername.Text + "'"
+            cmd.CommandText = "update user set password = '" & txtPassword.Text & "', priv_a1='" & priv_a1 & "', priv_a2='" & priv_a2 & "', priv_a3='" & priv_a3 & "', priv_a4='" & priv_a4 & "', priv_b1='" & priv_b1 & "', priv_b2='" & priv_b2 & "', priv_b3='" & priv_b3 & "', priv_b4='" & priv_b4 & "', priv_b5='" & priv_b5 & "', priv_b6='" & priv_b6 & "', priv_c1='" & priv_c1 & "', priv_d1='" & priv_d1 & "', priv_d2='" & priv_d2 & "', priv_d3='" & priv_d3 & "', priv_e1='" & priv_e1 & "', operator='" & variabels.oper & "', modul='" & modul & "' where username = '" & txtUsername.Text & "'"
             cmd.ExecuteNonQuery()
-            functions.localConnection.Close()
-            btnAdd.Text = "Copy"
-            btnUpdate.Enabled = False
+            btnAdd.Text = "Add"
             refreshData()
         Catch ex As MySqlException
             MessageBox.Show(ex.ToString)
@@ -158,13 +170,16 @@ Public Class frmUsersManagement
     End Sub
 
     Dim i As Integer
+    Dim k As Integer = 0
     Private Sub gridUsersManagement_Click(sender As Object, e As EventArgs) Handles gridList.Click
-        btnAdd.Text = "Copy"
+        btnAdd.Text = "Add"
         btnUpdate.Enabled = True
         btnDelete.Enabled = True
         btnAdd.Enabled = True
         txtUsername.Enabled = False
         i = gridList.CurrentRow.Index
+        k = gridList.CurrentCell.ColumnIndex
+        kriteria = gridList.Columns(k).Name
         txtUsername.Text = gridList.Item(0, i).Value
         txtPassword.Text = gridList.Item(1, i).Value
         a.Checked = False
@@ -186,4 +201,105 @@ Public Class frmUsersManagement
         d3.Checked = gridList.Item(15, i).Value
         f.Checked = gridList.Item(16, i).Value
     End Sub
+
+    Dim kriteria As String = ""
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Dim dv = New DataView(dt)
+        dv.RowFilter = kriteria + " like '%" + txtSearch.Text + "%'"
+        gridList.DataSource = dv
+    End Sub
+
+    Private Function setVariabel()
+        If (a1.Checked = True) Then
+            priv_a1 = 1
+        Else
+            priv_a1 = 0
+        End If
+
+        If (a2.Checked = True) Then
+            priv_a2 = 1
+        Else
+            priv_a2 = 0
+        End If
+
+        If (a3.Checked = True) Then
+            priv_a3 = 1
+        Else
+            priv_a3 = 0
+        End If
+
+        If (a4.Checked = True) Then
+            priv_a4 = 1
+        Else
+            priv_a4 = 0
+        End If
+
+        If (b1.Checked = True) Then
+            priv_b1 = 1
+        Else
+            priv_b1 = 0
+        End If
+
+        If (b2.Checked = True) Then
+            priv_b2 = 1
+        Else
+            priv_b2 = 0
+        End If
+
+        If (b3.Checked = True) Then
+            priv_b3 = 1
+        Else
+            priv_b3 = 0
+        End If
+
+        If (b4.Checked = True) Then
+            priv_b4 = 1
+        Else
+            priv_b4 = 0
+        End If
+
+        If (b5.Checked = True) Then
+            priv_b5 = 1
+        Else
+            priv_b5 = 0
+        End If
+
+        If (b6.Checked = True) Then
+            priv_b6 = 1
+        Else
+            priv_b6 = 0
+        End If
+
+        If (c.Checked = True) Then
+            priv_c1 = 1
+        Else
+            priv_c1 = 0
+        End If
+
+        If (d1.Checked = True) Then
+            priv_d1 = 1
+        Else
+            priv_d1 = 0
+        End If
+
+        If (d2.Checked = True) Then
+            priv_d2 = 1
+        Else
+            priv_d2 = 0
+        End If
+
+        If (d3.Checked = True) Then
+            priv_d3 = 1
+        Else
+            priv_d3 = 0
+        End If
+
+        If (f.Checked = True) Then
+            priv_e1 = 1
+        Else
+            priv_e1 = 0
+        End If
+
+        Return True
+    End Function
 End Class

@@ -44,11 +44,6 @@ Partial Class frmServerSettings
         Me.txtUsernameWeb = New System.Windows.Forms.TextBox()
         Me.txtServerWeb = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.chkAuto = New System.Windows.Forms.CheckBox()
-        Me.txtInterval = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtDatabase
@@ -149,7 +144,7 @@ Partial Class frmServerSettings
         '
         'btnSaveWeb
         '
-        Me.btnSaveWeb.Location = New System.Drawing.Point(19, 352)
+        Me.btnSaveWeb.Location = New System.Drawing.Point(19, 333)
         Me.btnSaveWeb.Name = "btnSaveWeb"
         Me.btnSaveWeb.Size = New System.Drawing.Size(75, 23)
         Me.btnSaveWeb.TabIndex = 62
@@ -231,62 +226,19 @@ Partial Class frmServerSettings
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.chkAuto)
-        Me.GroupBox2.Controls.Add(Me.txtInterval)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(19, 196)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(419, 150)
+        Me.GroupBox2.Size = New System.Drawing.Size(419, 131)
         Me.GroupBox2.TabIndex = 61
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Web Server Settings"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(180, 119)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(30, 13)
-        Me.Label9.TabIndex = 63
-        Me.Label9.Text = "detik"
-        '
-        'chkAuto
-        '
-        Me.chkAuto.AutoSize = True
-        Me.chkAuto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkAuto.Location = New System.Drawing.Point(8, 118)
-        Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(67, 17)
-        Me.chkAuto.TabIndex = 64
-        Me.chkAuto.Text = "Interval :"
-        Me.chkAuto.UseVisualStyleBackColor = True
-        '
-        'txtInterval
-        '
-        Me.txtInterval.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInterval.Location = New System.Drawing.Point(79, 116)
-        Me.txtInterval.Name = "txtInterval"
-        Me.txtInterval.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtInterval.Size = New System.Drawing.Size(95, 21)
-        Me.txtInterval.TabIndex = 63
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(100, 352)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 63
-        Me.Button3.Text = "Reconnect"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'frmServerSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(464, 386)
-        Me.Controls.Add(Me.Button3)
+        Me.ClientSize = New System.Drawing.Size(464, 373)
         Me.Controls.Add(Me.btnSaveWeb)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -312,8 +264,6 @@ Partial Class frmServerSettings
         Me.Opacity = 0.0R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Server Settings"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -339,8 +289,4 @@ Partial Class frmServerSettings
     Friend WithEvents txtUsernameWeb As System.Windows.Forms.TextBox
     Friend WithEvents txtServerWeb As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents chkAuto As System.Windows.Forms.CheckBox
-    Friend WithEvents txtInterval As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

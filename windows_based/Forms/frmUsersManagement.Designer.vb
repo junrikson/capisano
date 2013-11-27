@@ -23,6 +23,7 @@ Partial Class frmUsersManagement
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsersManagement))
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.gridList = New System.Windows.Forms.DataGridView()
@@ -121,6 +122,7 @@ Partial Class frmUsersManagement
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(161, 20)
         Me.txtPassword.TabIndex = 46
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'Label2
         '
@@ -331,7 +333,7 @@ Partial Class frmUsersManagement
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 66
-        Me.btnAdd.Text = "Add"
+        Me.btnAdd.Text = "Save"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'btnDelete
@@ -400,7 +402,9 @@ Partial Class frmUsersManagement
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.gridList)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmUsersManagement"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Users Management"
         CType(Me.gridList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

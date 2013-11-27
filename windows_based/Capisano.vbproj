@@ -45,6 +45,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -73,6 +76,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>capisanoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaftarCustomer.Designer.vb">
+      <DependentUpon>frmDaftarCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaftarCustomer.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmActivityLog.Designer.vb">
       <DependentUpon>frmActivityLog.vb</DependentUpon>
@@ -202,6 +211,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\frmDaftarCustomer.resx">
+      <DependentUpon>frmDaftarCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +303,9 @@
     <Folder Include="Icons\" />
     <Folder Include="Images\" />
     <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

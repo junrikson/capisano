@@ -1,13 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class frmDaftarItem
+Public Class frmDaftarCustomer
     Dim cmd As MySqlCommand
-    Dim modul As String = "DFTITEM"
+    Dim modul As String = "DFTCUST"
     Dim da As MySqlDataAdapter
     Dim dt As DataTable
     Private Function refreshData()
         Try
             functions.localConnect()
-            cmd = New MySqlCommand("Select code as Code, name as Name, kategori as Kategori, price as Price, details as Details, images as Images, timestamp as Time, operator as Operator from daftaritem", functions.localConnection)
+            cmd = New MySqlCommand("Select phone as Phone, email as Email, password as Password, name as Name, address as Alamat, city as Kota, state as Provinsi, country as Negara, postal as 'K. Pos', timestamp as Time, operator as Operator, auto as Auto from daftarcustomer", functions.localConnection)
             da = New MySqlDataAdapter(cmd)
             dt = New DataTable()
             da.Fill(dt)
@@ -18,12 +18,10 @@ Public Class frmDaftarItem
         Return True
     End Function
 
-    Private Sub frmDaftarItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmDaftarKategoriMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnDelete.Enabled = False
         btnUpdate.Enabled = False
         refreshData()
-        imageItem.BackgroundImage = Image.FromFile(System.IO.Path.Combine("images", "default.jpg"))
-        functions.fillComboBox("select code from daftarkategoriitem", comboCategory, functions.localConnection)
         kriteria = gridList.Columns(0).Name
     End Sub
 
@@ -33,8 +31,8 @@ Public Class frmDaftarItem
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         If (btnAdd.Text = "Add") Then
-            txtCode.Text = ""
-            txtCode.Enabled = True
+            txtPhone.Text = ""
+            txtPhone.Enabled = True
             btnAdd.Text = "Save"
             btnUpdate.Enabled = False
             btnDelete.Enabled = False
@@ -45,11 +43,11 @@ Public Class frmDaftarItem
                 cmd.Connection = functions.localConnection
                 cmd.CommandType = CommandType.Text
 
-                cmd.CommandText = "insert into daftaritem (code, name, kategori, price, details, images, operator, modul) VALUES ('" + txtCode.Text + "', '" + txtName.Text + "', '" + comboCategory.Text + "', '" + txtPrice.Text + "', '" + txtDetails.Text + "', '" + txtImages.Text + "', '" + variabels.oper + "', '" + modul + "');"
+                cmd.CommandText = "insert into daftarcustomer (phone, email, password, name, address, city, state, country, postal, operator, modul) VALUES ('" + txtPhone.Text + "', '" + txtEmail.Text + "', '" + txtPassword.Text + "', '" + txtName.Text + "', '" + txtAddress.Text + "', '" + txtCity.Text + "', '" + txtState.Text + "', '" + txtCountry.Text + "', '" + txtPostal.Text + "', '" + variabels.oper + "', '" + modul + "');"
                 cmd.ExecuteNonQuery()
 
-                txtCode.Enabled = True
-                txtCode.Text = ""
+                txtPhone.Enabled = True
+                txtPhone.Text = ""
                 btnUpdate.Enabled = False
                 btnDelete.Enabled = False
 
@@ -67,13 +65,13 @@ Public Class frmDaftarItem
             cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
 
-            cmd.CommandText = "delete from daftaritem where code = '" & txtCode.Text & "'"
+            cmd.CommandText = "delete from daftarcustomer where auto='" & txtAuto.Text & "'"
             cmd.ExecuteNonQuery()
 
             btnDelete.Enabled = False
             btnUpdate.Enabled = False
-            txtCode.Text = ""
-            txtCode.Enabled = True
+            txtPhone.Text = ""
+            txtPhone.Enabled = True
             btnAdd.Text = "Save"
 
             refreshData()
@@ -88,7 +86,7 @@ Public Class frmDaftarItem
             cmd = New MySqlCommand
             cmd.Connection = functions.localConnection
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "update daftaritem set name = '" + txtName.Text + "', kategori='" + comboCategory.Text + "', price='" + txtPrice.Text + "', details='" + txtDetails.Text + "', images='" + txtImages.Text + "', operator='" + variabels.oper + "' where code = '" + txtCode.Text + "'"
+            cmd.CommandText = "update daftarcustomer set phone = '" + txtPhone.Text + "', email='" + txtEmail.Text + "', password='" + txtPassword.Text + "', name='" + txtName.Text + "', address='" + txtAddress.Text + "', city='" + txtCity.Text + "', state='" + txtState.Text + "', country='" + txtCountry.Text + "', postal='" + txtPostal.Text + "', operator='" + variabels.oper + "' where auto='" & txtAuto.Text & "'"
             cmd.ExecuteNonQuery()
             btnAdd.Text = "Add"
             refreshData()
@@ -104,20 +102,18 @@ Public Class frmDaftarItem
         btnUpdate.Enabled = True
         btnDelete.Enabled = True
         btnAdd.Enabled = True
-        txtCode.Enabled = False
         i = gridList.CurrentRow.Index
         k = gridList.CurrentCell.ColumnIndex
         kriteria = gridList.Columns(k).Name
-        txtCode.Text = gridList.Item(0, i).Value
-        txtName.Text = gridList.Item(1, i).Value
-        comboCategory.Text = gridList.Item(2, i).Value
-        txtPrice.Text = gridList.Item(3, i).Value
-        txtDetails.Text = gridList.Item(4, i).Value
-        txtImages.Text = gridList.Item(5, i).Value
-    End Sub
-
-    Private Sub imageItem_Click(sender As Object, e As EventArgs) Handles imageItem.Click
-        Process.Start("images\default.jpg")
+        txtPhone.Text = gridList.Item(0, i).Value
+        txtEmail.Text = gridList.Item(1, i).Value
+        txtPassword.Text = gridList.Item(2, i).Value
+        txtName.Text = gridList.Item(3, i).Value
+        txtCity.Text = gridList.Item(5, i).Value
+        txtState.Text = gridList.Item(6, i).Value
+        txtCountry.Text = gridList.Item(7, i).Value
+        txtPostal.Text = gridList.Item(8, i).Value
+        txtAuto.Text = gridList.Item(11, i).Value
     End Sub
 
     Dim kriteria As String = ""

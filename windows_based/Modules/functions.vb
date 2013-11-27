@@ -71,4 +71,20 @@ Class functions
 
     'Objek koneksi Lokal
     Public Shared webConnection As New MySqlConnection("server=" + variabels.webServerAdress + "; user id=" + variabels.webServerUsername + "; password=" + variabels.webServerPassword + "; database=" + variabels.webDatabaseName)
+
+    'Fungsi Konek Database
+    Public Shared Function cekOtoritas(menu As String)
+        Dim cmd As MySqlDataReader
+        Dim otoritas As Boolean = False
+        Try
+            functions.localConnect()
+            cmd = New MySqlCommand("select " + menu + " from user where username ='" + variabels.oper + "'", functions.localConnection).ExecuteReader()
+            cmd.Read()
+            otoritas = cmd.GetBoolean(0)
+            cmd.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+        Return otoritas
+    End Function
 End Class

@@ -22,6 +22,7 @@ Partial Class frmDaftarMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDaftarMenu))
         Me.comboCategory = New System.Windows.Forms.ComboBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -51,7 +52,7 @@ Partial Class frmDaftarMenu
         Me.btnBrowseDetails = New System.Windows.Forms.Button()
         Me.txtPriceDetails = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtSearchDetails = New System.Windows.Forms.TextBox()
         Me.btnRefreshDetails = New System.Windows.Forms.Button()
         Me.btnUpdateDetails = New System.Windows.Forms.Button()
         Me.btnDeleteDetails = New System.Windows.Forms.Button()
@@ -323,12 +324,12 @@ Partial Class frmDaftarMenu
         Me.Label9.TabIndex = 62
         Me.Label9.Text = "Price :"
         '
-        'TextBox5
+        'txtSearchDetails
         '
-        Me.TextBox5.Location = New System.Drawing.Point(586, 12)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(251, 20)
-        Me.TextBox5.TabIndex = 65
+        Me.txtSearchDetails.Location = New System.Drawing.Point(586, 12)
+        Me.txtSearchDetails.Name = "txtSearchDetails"
+        Me.txtSearchDetails.Size = New System.Drawing.Size(251, 20)
+        Me.txtSearchDetails.TabIndex = 65
         '
         'btnRefreshDetails
         '
@@ -425,7 +426,7 @@ Partial Class frmDaftarMenu
         Me.Controls.Add(Me.btnUpdateDetails)
         Me.Controls.Add(Me.btnDeleteDetails)
         Me.Controls.Add(Me.btnAddDetails)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtSearchDetails)
         Me.Controls.Add(Me.btnRefreshDetails)
         Me.Controls.Add(Me.txtPriceDetails)
         Me.Controls.Add(Me.Label9)
@@ -456,6 +457,7 @@ Partial Class frmDaftarMenu
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDaftarMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Daftar Menu"
@@ -495,7 +497,7 @@ Partial Class frmDaftarMenu
     Friend WithEvents btnBrowseDetails As System.Windows.Forms.Button
     Friend WithEvents txtPriceDetails As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtSearchDetails As System.Windows.Forms.TextBox
     Friend WithEvents btnRefreshDetails As System.Windows.Forms.Button
     Friend WithEvents btnUpdateDetails As System.Windows.Forms.Button
     Friend WithEvents btnDeleteDetails As System.Windows.Forms.Button

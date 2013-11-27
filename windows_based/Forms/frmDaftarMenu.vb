@@ -135,6 +135,7 @@ Public Class frmDaftarMenu
         txtDetails.Text = gridList.Item(4, i).Value
         txtImages.Text = gridList.Item(5, i).Value
         refreshDataDetails(gridList.Item(0, i).Value.ToString)
+        kriteriaDetails = gridListDetails.Columns(0).Name
         updateTotal()
     End Sub
 
@@ -147,14 +148,16 @@ Public Class frmDaftarMenu
 
     'Details
     Dim modulDetails As String = "DFTMENUDET"
+    Dim daDetails As MySqlDataAdapter
+    Dim dtDetails As DataTable
     Private Function refreshDataDetails(menucode As String)
         Try
             functions.localConnect()
             cmd = New MySqlCommand("select itemcode as Code, itemname as Name, itemkategori as Kategori, itemprice as Price, itemqty as Qty, timestamp as Time, operator as Operator, auto as Auto from daftarmenudetails where menucode = '" + menucode + "'", functions.localConnection)
-            Dim da = New MySqlDataAdapter(cmd)
-            Dim dt = New DataTable()
-            da.Fill(dt)
-            gridListDetails.DataSource = dt
+            daDetails = New MySqlDataAdapter(cmd)
+            dtDetails = New DataTable()
+            daDetails.Fill(dtDetails)
+            gridListDetails.DataSource = dtDetails
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -236,5 +239,14 @@ Public Class frmDaftarMenu
         txtAutoDetails.Text = gridListDetails.Item(7, j).Value
     End Sub
 
+    Dim kriteriaDetails As String = ""
+    Private Sub txtSearchDetails_TextChanged(sender As Object, e As EventArgs) Handles txtSearchDetails.TextChanged
+        Dim dv = New DataView(dtDetails)
+        dv.RowFilter = kriteriaDetails + " like '%" + txtSearchDetails.Text + "%'"
+        gridListDetails.DataSource = dv
+    End Sub
 
+    Private Sub btnRefreshDetails_Click(sender As Object, e As EventArgs) Handles btnRefreshDetails.Click
+        refreshDataDetails(gridList.Item(0, i).Value.ToString)
+    End Sub
 End Class

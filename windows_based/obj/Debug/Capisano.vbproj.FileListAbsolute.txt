@@ -27,3 +27,4 @@ C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\MySql.Data.d
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\Capisano.exe.config
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.vbprojResolveAssemblyReference.cache
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmQueryDaftarMenuDetails.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarCustomer.resources

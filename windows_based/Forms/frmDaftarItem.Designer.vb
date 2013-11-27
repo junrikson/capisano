@@ -22,6 +22,7 @@ Partial Class frmDaftarItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDaftarItem))
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.txtName = New System.Windows.Forms.TextBox()
@@ -50,7 +51,7 @@ Partial Class frmDaftarItem
         Me.btnDelete.Location = New System.Drawing.Point(207, 410)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
-        Me.btnDelete.TabIndex = 17
+        Me.btnDelete.TabIndex = 23
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -59,7 +60,7 @@ Partial Class frmDaftarItem
         Me.btnAdd.Location = New System.Drawing.Point(45, 410)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 16
+        Me.btnAdd.TabIndex = 21
         Me.btnAdd.Text = "Save"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -68,14 +69,14 @@ Partial Class frmDaftarItem
         Me.txtName.Location = New System.Drawing.Point(65, 269)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(275, 20)
-        Me.txtName.TabIndex = 14
+        Me.txtName.TabIndex = 3
         '
         'txtCode
         '
         Me.txtCode.Location = New System.Drawing.Point(65, 243)
         Me.txtCode.Name = "txtCode"
         Me.txtCode.Size = New System.Drawing.Size(100, 20)
-        Me.txtCode.TabIndex = 13
+        Me.txtCode.TabIndex = 2
         '
         'Label3
         '
@@ -114,14 +115,14 @@ Partial Class frmDaftarItem
         Me.gridList.Name = "gridList"
         Me.gridList.ReadOnly = True
         Me.gridList.Size = New System.Drawing.Size(496, 197)
-        Me.gridList.TabIndex = 20
+        Me.gridList.TabIndex = 50
         '
         'btnRefresh
         '
         Me.btnRefresh.Location = New System.Drawing.Point(433, 9)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(75, 23)
-        Me.btnRefresh.TabIndex = 21
+        Me.btnRefresh.TabIndex = 51
         Me.btnRefresh.Text = "Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = True
         '
@@ -130,7 +131,7 @@ Partial Class frmDaftarItem
         Me.txtSearch.Location = New System.Drawing.Point(12, 12)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(415, 20)
-        Me.txtSearch.TabIndex = 22
+        Me.txtSearch.TabIndex = 1
         '
         'imageItem
         '
@@ -148,7 +149,7 @@ Partial Class frmDaftarItem
         Me.btnBrowseImage.Location = New System.Drawing.Point(453, 410)
         Me.btnBrowseImage.Name = "btnBrowseImage"
         Me.btnBrowseImage.Size = New System.Drawing.Size(55, 23)
-        Me.btnBrowseImage.TabIndex = 25
+        Me.btnBrowseImage.TabIndex = 7
         Me.btnBrowseImage.Text = "Browse"
         Me.btnBrowseImage.UseVisualStyleBackColor = True
         '
@@ -157,7 +158,7 @@ Partial Class frmDaftarItem
         Me.btnUpdate.Location = New System.Drawing.Point(126, 410)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnUpdate.TabIndex = 26
+        Me.btnUpdate.TabIndex = 22
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
@@ -166,7 +167,7 @@ Partial Class frmDaftarItem
         Me.txtPrice.Location = New System.Drawing.Point(65, 321)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(100, 20)
-        Me.txtPrice.TabIndex = 28
+        Me.txtPrice.TabIndex = 5
         Me.txtPrice.Text = "0"
         '
         'Label4
@@ -184,14 +185,14 @@ Partial Class frmDaftarItem
         Me.comboCategory.Location = New System.Drawing.Point(65, 296)
         Me.comboCategory.Name = "comboCategory"
         Me.comboCategory.Size = New System.Drawing.Size(100, 21)
-        Me.comboCategory.TabIndex = 29
+        Me.comboCategory.TabIndex = 4
         '
         'txtDetails
         '
         Me.txtDetails.Location = New System.Drawing.Point(65, 348)
         Me.txtDetails.Name = "txtDetails"
         Me.txtDetails.Size = New System.Drawing.Size(273, 51)
-        Me.txtDetails.TabIndex = 50
+        Me.txtDetails.TabIndex = 6
         Me.txtDetails.Text = ""
         '
         'Label6
@@ -234,6 +235,7 @@ Partial Class frmDaftarItem
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDaftarItem"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Daftar Item"

@@ -45,7 +45,6 @@ Public Class frmLogin
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
             cek = 2
-            cmd.Close()
         End Try
 
         If (cek = 1) Then

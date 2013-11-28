@@ -55,16 +55,14 @@ Partial Class frmMain
         Me.toolstripMain = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.panelMain = New System.Windows.Forms.StatusStrip()
         Me.panelStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.panelRightBorder = New System.Windows.Forms.Panel()
         Me.btnShowInfo = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.timerOutputUpdate = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPendingDKI = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.chkDKI = New System.Windows.Forms.CheckBox()
         Me.lblPendingDI = New System.Windows.Forms.Label()
@@ -81,11 +79,39 @@ Partial Class frmMain
         Me.chkDC = New System.Windows.Forms.CheckBox()
         Me.btnUpdateOutput = New System.Windows.Forms.Button()
         Me.txtIntervalOutput = New System.Windows.Forms.TextBox()
-        Me.chkIntervalOutput = New System.Windows.Forms.CheckBox()
-        Me.txtTest = New System.Windows.Forms.TextBox()
         Me.panelInfo = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.btnDC = New System.Windows.Forms.Button()
+        Me.btnDM = New System.Windows.Forms.Button()
+        Me.btnDKM = New System.Windows.Forms.Button()
+        Me.btnDI = New System.Windows.Forms.Button()
+        Me.btnDKI = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.menuMain.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
+        Me.panelMain.SuspendLayout()
         Me.panelRightBorder.SuspendLayout()
         Me.panelInfo.SuspendLayout()
         Me.SuspendLayout()
@@ -281,20 +307,21 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
-        'StatusStrip1
+        'panelMain
         '
-        Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.panelStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 578)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(800, 22)
-        Me.StatusStrip1.TabIndex = 54
-        Me.StatusStrip1.Text = "StatusStrip1"
+        Me.panelMain.BackColor = System.Drawing.Color.Black
+        Me.panelMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.panelStatus})
+        Me.panelMain.Location = New System.Drawing.Point(0, 578)
+        Me.panelMain.Name = "panelMain"
+        Me.panelMain.Size = New System.Drawing.Size(800, 22)
+        Me.panelMain.TabIndex = 54
+        Me.panelMain.Text = "StatusStrip1"
         '
         'panelStatus
         '
         Me.panelStatus.AutoSize = False
-        Me.panelStatus.ForeColor = System.Drawing.SystemColors.Control
+        Me.panelStatus.BackColor = System.Drawing.Color.Transparent
+        Me.panelStatus.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.panelStatus.Name = "panelStatus"
         Me.panelStatus.Size = New System.Drawing.Size(255, 17)
         Me.panelStatus.Text = "Selamat datang di capisano."
@@ -313,7 +340,7 @@ Partial Class frmMain
         '
         'btnShowInfo
         '
-        Me.btnShowInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnShowInfo.BackColor = System.Drawing.Color.Silver
         Me.btnShowInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnShowInfo.FlatAppearance.BorderSize = 0
         Me.btnShowInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -347,19 +374,9 @@ Partial Class frmMain
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(7, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 13)
+        Me.Label1.Size = New System.Drawing.Size(114, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Data output update pending"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 269)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Web Server"
+        Me.Label1.Text = "Send data pending"
         '
         'lblPendingDKI
         '
@@ -369,15 +386,6 @@ Partial Class frmMain
         Me.lblPendingDKI.TabIndex = 3
         Me.lblPendingDKI.Text = "0"
         Me.lblPendingDKI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(94, 266)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "0"
         '
         'Label5
         '
@@ -502,47 +510,60 @@ Partial Class frmMain
         '
         'btnUpdateOutput
         '
+        Me.btnUpdateOutput.BackColor = System.Drawing.Color.Silver
         Me.btnUpdateOutput.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdateOutput.Location = New System.Drawing.Point(138, 135)
+        Me.btnUpdateOutput.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateOutput.Location = New System.Drawing.Point(147, 135)
         Me.btnUpdateOutput.Margin = New System.Windows.Forms.Padding(0)
         Me.btnUpdateOutput.Name = "btnUpdateOutput"
-        Me.btnUpdateOutput.Size = New System.Drawing.Size(52, 26)
+        Me.btnUpdateOutput.Size = New System.Drawing.Size(46, 22)
         Me.btnUpdateOutput.TabIndex = 19
-        Me.btnUpdateOutput.Text = "Update"
-        Me.btnUpdateOutput.UseVisualStyleBackColor = True
+        Me.btnUpdateOutput.Text = "Start"
+        Me.btnUpdateOutput.UseVisualStyleBackColor = False
         '
         'txtIntervalOutput
         '
-        Me.txtIntervalOutput.Location = New System.Drawing.Point(72, 139)
+        Me.txtIntervalOutput.Location = New System.Drawing.Point(73, 137)
         Me.txtIntervalOutput.Name = "txtIntervalOutput"
         Me.txtIntervalOutput.Size = New System.Drawing.Size(57, 20)
         Me.txtIntervalOutput.TabIndex = 20
         Me.txtIntervalOutput.Text = "1000"
         '
-        'chkIntervalOutput
-        '
-        Me.chkIntervalOutput.AutoSize = True
-        Me.chkIntervalOutput.Location = New System.Drawing.Point(10, 141)
-        Me.chkIntervalOutput.Name = "chkIntervalOutput"
-        Me.chkIntervalOutput.Size = New System.Drawing.Size(61, 17)
-        Me.chkIntervalOutput.TabIndex = 21
-        Me.chkIntervalOutput.Text = "Interval"
-        Me.chkIntervalOutput.UseVisualStyleBackColor = True
-        '
-        'txtTest
-        '
-        Me.txtTest.Location = New System.Drawing.Point(29, 209)
-        Me.txtTest.Name = "txtTest"
-        Me.txtTest.Size = New System.Drawing.Size(100, 20)
-        Me.txtTest.TabIndex = 22
-        '
         'panelInfo
         '
         Me.panelInfo.BackColor = System.Drawing.SystemColors.Control
-        Me.panelInfo.Controls.Add(Me.txtTest)
-        Me.panelInfo.Controls.Add(Me.chkIntervalOutput)
+        Me.panelInfo.Controls.Add(Me.TextBox1)
+        Me.panelInfo.Controls.Add(Me.Button6)
+        Me.panelInfo.Controls.Add(Me.Label3)
+        Me.panelInfo.Controls.Add(Me.Button1)
+        Me.panelInfo.Controls.Add(Me.Button2)
+        Me.panelInfo.Controls.Add(Me.Button3)
+        Me.panelInfo.Controls.Add(Me.Button4)
+        Me.panelInfo.Controls.Add(Me.Button5)
+        Me.panelInfo.Controls.Add(Me.CheckBox2)
+        Me.panelInfo.Controls.Add(Me.Label4)
+        Me.panelInfo.Controls.Add(Me.Label7)
+        Me.panelInfo.Controls.Add(Me.CheckBox3)
+        Me.panelInfo.Controls.Add(Me.Label9)
+        Me.panelInfo.Controls.Add(Me.Label11)
+        Me.panelInfo.Controls.Add(Me.CheckBox4)
+        Me.panelInfo.Controls.Add(Me.Label13)
+        Me.panelInfo.Controls.Add(Me.Label14)
+        Me.panelInfo.Controls.Add(Me.CheckBox5)
+        Me.panelInfo.Controls.Add(Me.Label15)
+        Me.panelInfo.Controls.Add(Me.Label16)
+        Me.panelInfo.Controls.Add(Me.CheckBox6)
+        Me.panelInfo.Controls.Add(Me.Label17)
+        Me.panelInfo.Controls.Add(Me.Label18)
+        Me.panelInfo.Controls.Add(Me.Label19)
+        Me.panelInfo.Controls.Add(Me.btnDC)
+        Me.panelInfo.Controls.Add(Me.btnDM)
+        Me.panelInfo.Controls.Add(Me.btnDKM)
+        Me.panelInfo.Controls.Add(Me.btnDI)
+        Me.panelInfo.Controls.Add(Me.btnDKI)
         Me.panelInfo.Controls.Add(Me.txtIntervalOutput)
         Me.panelInfo.Controls.Add(Me.btnUpdateOutput)
+        Me.panelInfo.Controls.Add(Me.Label2)
         Me.panelInfo.Controls.Add(Me.chkDC)
         Me.panelInfo.Controls.Add(Me.Label12)
         Me.panelInfo.Controls.Add(Me.lblPendingDC)
@@ -557,9 +578,7 @@ Partial Class frmMain
         Me.panelInfo.Controls.Add(Me.lblPendingDI)
         Me.panelInfo.Controls.Add(Me.chkDKI)
         Me.panelInfo.Controls.Add(Me.Label5)
-        Me.panelInfo.Controls.Add(Me.Label4)
         Me.panelInfo.Controls.Add(Me.lblPendingDKI)
-        Me.panelInfo.Controls.Add(Me.Label3)
         Me.panelInfo.Controls.Add(Me.Label1)
         Me.panelInfo.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelInfo.Location = New System.Drawing.Point(19, 34)
@@ -567,6 +586,273 @@ Partial Class frmMain
         Me.panelInfo.Size = New System.Drawing.Size(200, 544)
         Me.panelInfo.TabIndex = 59
         Me.panelInfo.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(73, 353)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(57, 20)
+        Me.TextBox1.TabIndex = 60
+        Me.TextBox1.Text = "1000"
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Silver
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(147, 351)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(46, 22)
+        Me.Button6.TabIndex = 59
+        Me.Button6.Text = "Start"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(8, 356)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 61
+        Me.Label3.Text = "Interval (ms)"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(165, 324)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(28, 19)
+        Me.Button1.TabIndex = 58
+        Me.Button1.Text = "C"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(165, 304)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(28, 19)
+        Me.Button2.TabIndex = 57
+        Me.Button2.Text = "C"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(165, 284)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(28, 19)
+        Me.Button3.TabIndex = 56
+        Me.Button3.Text = "C"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(165, 264)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(28, 19)
+        Me.Button4.TabIndex = 55
+        Me.Button4.Text = "C"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(165, 244)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(28, 19)
+        Me.Button5.TabIndex = 54
+        Me.Button5.Text = "C"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(147, 327)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.TabIndex = 49
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.Location = New System.Drawing.Point(31, 328)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(120, 13)
+        Me.Label4.TabIndex = 48
+        Me.Label4.Text = "Daftar Customer"
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(4, 328)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(24, 13)
+        Me.Label7.TabIndex = 47
+        Me.Label7.Text = "0"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(147, 307)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox3.TabIndex = 46
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.Location = New System.Drawing.Point(31, 308)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(120, 13)
+        Me.Label9.TabIndex = 45
+        Me.Label9.Text = "Daftar Menu"
+        '
+        'Label11
+        '
+        Me.Label11.Location = New System.Drawing.Point(4, 308)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(24, 13)
+        Me.Label11.TabIndex = 44
+        Me.Label11.Text = "0"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(147, 287)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox4.TabIndex = 43
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.Location = New System.Drawing.Point(31, 288)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(120, 13)
+        Me.Label13.TabIndex = 42
+        Me.Label13.Text = "Daftar Kategori Menu"
+        '
+        'Label14
+        '
+        Me.Label14.Location = New System.Drawing.Point(4, 288)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(24, 13)
+        Me.Label14.TabIndex = 41
+        Me.Label14.Text = "0"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(147, 267)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox5.TabIndex = 40
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.Location = New System.Drawing.Point(31, 268)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(104, 13)
+        Me.Label15.TabIndex = 39
+        Me.Label15.Text = "Payments "
+        '
+        'Label16
+        '
+        Me.Label16.Location = New System.Drawing.Point(4, 268)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(24, 13)
+        Me.Label16.TabIndex = 38
+        Me.Label16.Text = "0"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(147, 247)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox6.TabIndex = 37
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.Location = New System.Drawing.Point(31, 248)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(104, 13)
+        Me.Label17.TabIndex = 36
+        Me.Label17.Text = "Order and Pending"
+        '
+        'Label18
+        '
+        Me.Label18.Location = New System.Drawing.Point(4, 248)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(24, 13)
+        Me.Label18.TabIndex = 35
+        Me.Label18.Text = "0"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(7, 224)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(136, 13)
+        Me.Label19.TabIndex = 34
+        Me.Label19.Text = "Data received pending"
+        '
+        'btnDC
+        '
+        Me.btnDC.Location = New System.Drawing.Point(165, 107)
+        Me.btnDC.Name = "btnDC"
+        Me.btnDC.Size = New System.Drawing.Size(28, 19)
+        Me.btnDC.TabIndex = 33
+        Me.btnDC.Text = "C"
+        Me.btnDC.UseVisualStyleBackColor = True
+        '
+        'btnDM
+        '
+        Me.btnDM.Location = New System.Drawing.Point(165, 87)
+        Me.btnDM.Name = "btnDM"
+        Me.btnDM.Size = New System.Drawing.Size(28, 19)
+        Me.btnDM.TabIndex = 32
+        Me.btnDM.Text = "C"
+        Me.btnDM.UseVisualStyleBackColor = True
+        '
+        'btnDKM
+        '
+        Me.btnDKM.Location = New System.Drawing.Point(165, 67)
+        Me.btnDKM.Name = "btnDKM"
+        Me.btnDKM.Size = New System.Drawing.Size(28, 19)
+        Me.btnDKM.TabIndex = 31
+        Me.btnDKM.Text = "C"
+        Me.btnDKM.UseVisualStyleBackColor = True
+        '
+        'btnDI
+        '
+        Me.btnDI.Location = New System.Drawing.Point(165, 47)
+        Me.btnDI.Name = "btnDI"
+        Me.btnDI.Size = New System.Drawing.Size(28, 19)
+        Me.btnDI.TabIndex = 30
+        Me.btnDI.Text = "C"
+        Me.btnDI.UseVisualStyleBackColor = True
+        '
+        'btnDKI
+        '
+        Me.btnDKI.Location = New System.Drawing.Point(165, 27)
+        Me.btnDKI.Name = "btnDKI"
+        Me.btnDKI.Size = New System.Drawing.Size(28, 19)
+        Me.btnDKI.TabIndex = 29
+        Me.btnDKI.Text = "C"
+        Me.btnDKI.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(8, 140)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 13)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "Interval (ms)"
         '
         'frmMain
         '
@@ -578,19 +864,19 @@ Partial Class frmMain
         Me.Controls.Add(Me.panelInfo)
         Me.Controls.Add(Me.panelRightBorder)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.panelMain)
         Me.Controls.Add(Me.menuMain)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.menuMain
         Me.Name = "frmMain"
         Me.Opacity = 0.0R
-        Me.Text = " "
+        Me.Text = " Catering Pilih Pesan Online dengan SMS Gateway"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.menuMain.ResumeLayout(False)
         Me.menuMain.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        Me.panelMain.ResumeLayout(False)
+        Me.panelMain.PerformLayout()
         Me.panelRightBorder.ResumeLayout(False)
         Me.panelInfo.ResumeLayout(False)
         Me.panelInfo.PerformLayout()
@@ -627,7 +913,7 @@ Partial Class frmMain
     Friend WithEvents toolstripMain As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewHelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents panelMain As System.Windows.Forms.StatusStrip
     Friend WithEvents panelStatus As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents DaftarCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -636,9 +922,7 @@ Partial Class frmMain
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents timerOutputUpdate As System.Windows.Forms.Timer
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lblPendingDKI As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents chkDKI As System.Windows.Forms.CheckBox
     Friend WithEvents lblPendingDI As System.Windows.Forms.Label
@@ -655,8 +939,36 @@ Partial Class frmMain
     Friend WithEvents chkDC As System.Windows.Forms.CheckBox
     Friend WithEvents btnUpdateOutput As System.Windows.Forms.Button
     Friend WithEvents txtIntervalOutput As System.Windows.Forms.TextBox
-    Friend WithEvents chkIntervalOutput As System.Windows.Forms.CheckBox
-    Friend WithEvents txtTest As System.Windows.Forms.TextBox
     Friend WithEvents panelInfo As System.Windows.Forms.Panel
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents btnDC As System.Windows.Forms.Button
+    Friend WithEvents btnDM As System.Windows.Forms.Button
+    Friend WithEvents btnDKM As System.Windows.Forms.Button
+    Friend WithEvents btnDI As System.Windows.Forms.Button
+    Friend WithEvents btnDKI As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

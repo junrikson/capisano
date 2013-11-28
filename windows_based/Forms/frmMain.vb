@@ -121,6 +121,7 @@ Public Class frmMain
         frm.Show()
     End Sub
 
+    'Fungsi Pada Left Sidebar
     Private Sub btnShowInfo_Click(sender As Object, e As EventArgs) Handles btnShowInfo.Click
         If (panelInfo.Visible = True) Then
             panelInfo.Visible = False
@@ -129,18 +130,72 @@ Public Class frmMain
         End If
     End Sub
 
-    Dim test As Integer = 0
     Private Sub timerOutputUpdate_Tick(sender As Object, e As EventArgs) Handles timerOutputUpdate.Tick
-        test = test + 1
-        txtTest.Text = test
+        If (chkDKI.Enabled = True) Then
+            functions.updateDaftarKategoriItem()
+        End If
+        If (chkDI.Enabled = True) Then
+            functions.updateDaftarItem()
+        End If
+        If (chkDKM.Enabled = True) Then
+            functions.updateDaftarKategoriMenu()
+        End If
+        If (chkDM.Enabled = True) Then
+            functions.updateDaftarMenu()
+        End If
+        If (chkDC.Enabled = True) Then
+            functions.updateDaftarCustomer()
+        End If
     End Sub
 
     Private Sub btnUpdateOutput_Click(sender As Object, e As EventArgs) Handles btnUpdateOutput.Click
         timerOutputUpdate.Interval = txtIntervalOutput.Text
-        If (chkIntervalOutput.Checked = True) Then
+        If (btnUpdateOutput.Text = "Start") Then
             timerOutputUpdate.Start()
+            btnUpdateOutput.Text = "Stop"
         Else
             timerOutputUpdate.Stop()
+            btnUpdateOutput.Text = "Start"
+        End If
+    End Sub
+
+   Private Sub btnDKI_Click(sender As Object, e As EventArgs) Handles btnDKI.Click
+        If (btnDKI.Text = "C") Then
+            functions.buttonCek("select count(*) from daftarkategoriitem where status='N' || status='U'", btnDKI, lblPendingDKI)
+        Else
+            functions.updateDaftarKategoriItem()
+        End If
+    End Sub
+
+    Private Sub btnDI_Click(sender As Object, e As EventArgs) Handles btnDI.Click
+        If (btnDI.Text = "C") Then
+            functions.buttonCek("select count(*) from daftaritem where status='N' || status='U'", btnDI, lblPendingDI)
+        Else
+            functions.updateDaftarItem()
+        End If
+    End Sub
+
+    Private Sub btnDKM_Click(sender As Object, e As EventArgs) Handles btnDKM.Click
+        If (btnDKM.Text = "C") Then
+            functions.buttonCek("select count(*) from daftarkategorimenu where status='N' || status='U'", btnDKM, lblPendingDKM)
+        Else
+            functions.updateDaftarKategoriMenu()
+        End If
+    End Sub
+
+    Private Sub btnDM_Click(sender As Object, e As EventArgs) Handles btnDM.Click
+        If (btnDM.Text = "C") Then
+            functions.buttonCek("select a1.total + a2.total from ((select count(*) as total from daftarmenu where status='N' || status='U') as a1, (select count(*) as total from daftarmenudetails where status='N' || status='U') as a2)", btnDM, lblPendingDM)
+        Else
+            functions.updateDaftarMenu()
+        End If
+    End Sub
+
+    Private Sub btnDC_Click(sender As Object, e As EventArgs) Handles btnDC.Click
+        If (btnDC.Text = "C") Then
+            functions.buttonCek("select count(*) from daftarcustomer where status='N' || status='U'", btnDC, lblPendingDC)
+        Else
+            functions.updateDaftarCustomer()
         End If
     End Sub
 End Class

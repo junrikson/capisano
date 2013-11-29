@@ -83,20 +83,8 @@ Partial Class frmMain
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -266,24 +254,24 @@ Partial Class frmMain
         'WebSettingsToolStripMenuItem
         '
         Me.WebSettingsToolStripMenuItem.Name = "WebSettingsToolStripMenuItem"
-        Me.WebSettingsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.WebSettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.WebSettingsToolStripMenuItem.Text = "Server Settings"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(148, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'SMSSettingsToolStripMenuItem
         '
         Me.SMSSettingsToolStripMenuItem.Name = "SMSSettingsToolStripMenuItem"
-        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.SMSSettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SMSSettingsToolStripMenuItem.Text = "SMS Settings"
         '
         'SMSTemplateToolStripMenuItem
         '
         Me.SMSTemplateToolStripMenuItem.Name = "SMSTemplateToolStripMenuItem"
-        Me.SMSTemplateToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.SMSTemplateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SMSTemplateToolStripMenuItem.Text = "SMS Template"
         '
         'toolstripMain
@@ -298,13 +286,13 @@ Partial Class frmMain
         'ViewHelpToolStripMenuItem
         '
         Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ViewHelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'panelMain
@@ -535,20 +523,8 @@ Partial Class frmMain
         Me.panelInfo.Controls.Add(Me.TextBox1)
         Me.panelInfo.Controls.Add(Me.Button6)
         Me.panelInfo.Controls.Add(Me.Label3)
-        Me.panelInfo.Controls.Add(Me.Button1)
-        Me.panelInfo.Controls.Add(Me.Button2)
-        Me.panelInfo.Controls.Add(Me.Button3)
         Me.panelInfo.Controls.Add(Me.Button4)
         Me.panelInfo.Controls.Add(Me.Button5)
-        Me.panelInfo.Controls.Add(Me.CheckBox2)
-        Me.panelInfo.Controls.Add(Me.Label4)
-        Me.panelInfo.Controls.Add(Me.Label7)
-        Me.panelInfo.Controls.Add(Me.CheckBox3)
-        Me.panelInfo.Controls.Add(Me.Label9)
-        Me.panelInfo.Controls.Add(Me.Label11)
-        Me.panelInfo.Controls.Add(Me.CheckBox4)
-        Me.panelInfo.Controls.Add(Me.Label13)
-        Me.panelInfo.Controls.Add(Me.Label14)
         Me.panelInfo.Controls.Add(Me.CheckBox5)
         Me.panelInfo.Controls.Add(Me.Label15)
         Me.panelInfo.Controls.Add(Me.Label16)
@@ -616,33 +592,6 @@ Partial Class frmMain
         Me.Label3.TabIndex = 61
         Me.Label3.Text = "Interval (ms)"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(165, 324)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(28, 19)
-        Me.Button1.TabIndex = 58
-        Me.Button1.Text = "C"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(165, 304)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(28, 19)
-        Me.Button2.TabIndex = 57
-        Me.Button2.Text = "C"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(165, 284)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(28, 19)
-        Me.Button3.TabIndex = 56
-        Me.Button3.Text = "C"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(165, 264)
@@ -660,84 +609,6 @@ Partial Class frmMain
         Me.Button5.TabIndex = 54
         Me.Button5.Text = "C"
         Me.Button5.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(147, 327)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 49
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.Location = New System.Drawing.Point(31, 328)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(120, 13)
-        Me.Label4.TabIndex = 48
-        Me.Label4.Text = "Daftar Customer"
-        '
-        'Label7
-        '
-        Me.Label7.Location = New System.Drawing.Point(4, 328)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(24, 13)
-        Me.Label7.TabIndex = 47
-        Me.Label7.Text = "0"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(147, 307)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 46
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.Location = New System.Drawing.Point(31, 308)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(120, 13)
-        Me.Label9.TabIndex = 45
-        Me.Label9.Text = "Daftar Menu"
-        '
-        'Label11
-        '
-        Me.Label11.Location = New System.Drawing.Point(4, 308)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(24, 13)
-        Me.Label11.TabIndex = 44
-        Me.Label11.Text = "0"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(147, 287)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox4.TabIndex = 43
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'Label13
-        '
-        Me.Label13.Location = New System.Drawing.Point(31, 288)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(120, 13)
-        Me.Label13.TabIndex = 42
-        Me.Label13.Text = "Daftar Kategori Menu"
-        '
-        'Label14
-        '
-        Me.Label14.Location = New System.Drawing.Point(4, 288)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(24, 13)
-        Me.Label14.TabIndex = 41
-        Me.Label14.Text = "0"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CheckBox5
         '
@@ -946,20 +817,8 @@ Partial Class frmMain
     Friend WithEvents btnDKM As System.Windows.Forms.Button
     Friend WithEvents btnDI As System.Windows.Forms.Button
     Friend WithEvents btnDKI As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label

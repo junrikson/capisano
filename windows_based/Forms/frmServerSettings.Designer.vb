@@ -51,7 +51,6 @@ Partial Class frmServerSettings
         Me.txtDatabase.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDatabase.Location = New System.Drawing.Point(98, 105)
         Me.txtDatabase.Name = "txtDatabase"
-        Me.txtDatabase.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtDatabase.Size = New System.Drawing.Size(327, 21)
         Me.txtDatabase.TabIndex = 46
         '
@@ -62,6 +61,7 @@ Partial Class frmServerSettings
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(327, 21)
         Me.txtPassword.TabIndex = 45
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'txtUsername
         '
@@ -196,7 +196,6 @@ Partial Class frmServerSettings
         Me.txtDatabaseWeb.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDatabaseWeb.Location = New System.Drawing.Point(98, 287)
         Me.txtDatabaseWeb.Name = "txtDatabaseWeb"
-        Me.txtDatabaseWeb.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtDatabaseWeb.Size = New System.Drawing.Size(327, 21)
         Me.txtDatabaseWeb.TabIndex = 56
         '
@@ -207,6 +206,7 @@ Partial Class frmServerSettings
         Me.txtPasswordWeb.Name = "txtPasswordWeb"
         Me.txtPasswordWeb.Size = New System.Drawing.Size(327, 21)
         Me.txtPasswordWeb.TabIndex = 55
+        Me.txtPasswordWeb.UseSystemPasswordChar = True
         '
         'txtUsernameWeb
         '

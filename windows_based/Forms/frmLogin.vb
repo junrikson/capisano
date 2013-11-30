@@ -1,6 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmLogin
-    Dim cmd As MySqlDataReader
     'fungsi untuk drag form
     Dim IsDraggingForm As Boolean = False
     Private MousePos As New System.Drawing.Point(0, 0)
@@ -31,6 +30,7 @@ Public Class frmLogin
         Dim cek As Integer = 0
         Try
             functions.localConnect()
+            Dim cmd As MySqlDataReader
             cmd = New MySqlCommand("Select password from user where username ='" + txtUsername.Text + "'", functions.localConnection).ExecuteReader()
             Try
                 cmd.Read()

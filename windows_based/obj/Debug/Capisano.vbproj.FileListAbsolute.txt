@@ -23,7 +23,6 @@ C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frm
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmActivityLog.resources
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmOrderAndPending.resources
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmUsersManagement.resources
-C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\MySql.Data.dll
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\Capisano.exe.config
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.vbprojResolveAssemblyReference.cache
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmQueryDaftarMenuDetails.resources

@@ -16,13 +16,23 @@ if(array_key_exists('action', $_GET)){
 		if( mysql_num_rows( $result ) == 0 ) 
 			error( "Maaf, username atau password anda Salah !!! " );
 		else{	
-			$_SESSION['username'] = $username;
+			$row = mysql_fetch_row($result);
+			$_SESSION['username'] = $row[0];
 			header( "Location: index.php" );
 		}
 	}
 	else	
 		$_SESSION['username'] = false;
 		header( "Location: index.php" );
+}
+
+function cek(){
+if(empty($_SESSION['username']))
+	return false;
+elseif($_SESSION['username'] == false)
+	return false;
+else
+	return true;
 }
 ?>
 

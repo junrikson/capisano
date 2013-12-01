@@ -19,7 +19,7 @@
 						<div class="maxheight indent-bot">
                         
                         <?php
-						if($_SESSION['username'] == false){
+						if(!cek()){
 							echo '
                             <form action="login.php?action=login" method="post">
                             <h3 class="p1">Login Form</h3>                       							

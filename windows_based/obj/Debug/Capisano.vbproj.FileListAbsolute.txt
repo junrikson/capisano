@@ -27,3 +27,8 @@ C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\Capisano.exe
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.vbprojResolveAssemblyReference.cache
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmQueryDaftarMenuDetails.resources
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarCustomer.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\AntControl.pdb
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\bin\Debug\AntControl.xml
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmServer.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmSendSMS.resources
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmSetting.resources

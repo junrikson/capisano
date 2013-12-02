@@ -67,7 +67,7 @@ Public Class frmMain
     End Sub
 
     Private Sub SMSSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SMSSettingsToolStripMenuItem.Click
-        Dim frm As New frmSMSSettings
+        Dim frm As New frmServer
         frm.MdiParent = Me
         frm.Show()
     End Sub

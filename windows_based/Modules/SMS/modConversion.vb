@@ -109,7 +109,13 @@ Module modConversion
                 Case "D" : Dec = 13
                 Case "E" : Dec = 14
                 Case "F" : Dec = 15
-                Case Else : Dec = CInt(Mid(Data, Pos, 1))
+                Case Else
+                    Try
+                        Dec = CInt(Mid(Data, Pos, 1))
+                    Catch ex As Exception
+                        Dec = 0
+                    End Try
+
             End Select
             If Pos = 1 Then
                 HexToDec = Dec * 16

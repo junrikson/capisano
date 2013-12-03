@@ -1,4 +1,5 @@
-﻿Public Class frmServer
+﻿Imports MySql.Data.MySqlClient
+Public Class frmServer
     Dim Buffer As Object = ""
     Dim Command As String
     Dim FlagNewMessage As Boolean = True ' variable indikasi membaca SMS
@@ -523,10 +524,32 @@
         Return retVal
     End Function
 
-
+    Dim cmd As MySqlCommand
     ' SIMPAN SMS DITERIMA KE DATABASE
     Private Function SaveMessage(ByVal Nomor As String, ByVal Message As String, ByVal SMSDate As Date) As Long
+        Dim password As String = "C" + functions.GetRandom(100, 999).ToString + "A" + functions.GetRandom(10, 99).ToString + "P"
+        Dim phone As String = "0" + Nomor.Substring(3, Nomor.Length - 3)
 
+        If ((Message.Substring(0, 3) = "REG") Or (Message.Substring(0, 3) = "reg")) Then
+            Try
+                functions.localConnect()
+                cmd = New MySqlCommand
+                cmd.Connection = functions.localConnection
+                cmd.CommandType = CommandType.Text
+
+                cmd.CommandText = "insert into daftarcustomer (phone, password) VALUES ('" & phone & "', '" & password & "')"
+                cmd.ExecuteNonQuery()
+
+                Dim pesan As String = "Pendaftaran Berhasil. USERNAME : " + phone + " dan PASSWORD : " + password
+                'Try
+                '    ExecuteSQLQuery("insert into sms_outbox(no_hp,tgl_sms,pesan,com,ip) values('" &
+                '                    Nomor & "','" & Format(Now, "yyyy-MM-dd hh:mm:ss") & "','" & pesan & "','" & Replace(CommPort, "COM", "") & "','" & ServerName & "')")
+                'Catch ex As Exception
+
+                'End Try
+            Catch ex As MySqlException
+            End Try
+        End If
         Dim retVal As Long
 
         'this is space to write StoreProcedure Execution Code
@@ -536,7 +559,6 @@
                             "'" & Nomor & "','" & Format(SMSDate, "yyyy-MM-dd hh:mm:ss") & "','" & _
                             Message & "','" & Replace(CommPort, "COM", "") & "','" & ServerName & "')")
             '-----------------------------------------------------------------
-
         Catch ex As Exception
 
             retVal = 1
@@ -554,7 +576,7 @@
             Me.Visible = False
             NotifyIcon1.ShowBalloonTip(5000)
         Else
-            
+
         End If
 
     End Sub

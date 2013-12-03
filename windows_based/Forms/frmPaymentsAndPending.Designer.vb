@@ -29,8 +29,8 @@ Partial Class frmPaymentsAndPending
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.btnApprove = New System.Windows.Forms.Button()
+        Me.gridListPending = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -51,7 +51,8 @@ Partial Class frmPaymentsAndPending
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnRefreshPending = New System.Windows.Forms.Button()
+        CType(Me.gridListPending, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -123,22 +124,26 @@ Partial Class frmPaymentsAndPending
         Me.CheckBox1.Text = "Send SMS"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnApprove
         '
-        Me.Button1.Location = New System.Drawing.Point(487, 347)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 49
-        Me.Button1.Text = "Approve"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnApprove.Location = New System.Drawing.Point(487, 347)
+        Me.btnApprove.Name = "btnApprove"
+        Me.btnApprove.Size = New System.Drawing.Size(75, 23)
+        Me.btnApprove.TabIndex = 49
+        Me.btnApprove.Text = "Approve"
+        Me.btnApprove.UseVisualStyleBackColor = True
         '
-        'DataGridView2
+        'gridListPending
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(487, 38)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(237, 302)
-        Me.DataGridView2.TabIndex = 48
+        Me.gridListPending.AllowUserToAddRows = False
+        Me.gridListPending.AllowUserToDeleteRows = False
+        Me.gridListPending.AllowUserToOrderColumns = True
+        Me.gridListPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridListPending.Location = New System.Drawing.Point(487, 38)
+        Me.gridListPending.Name = "gridListPending"
+        Me.gridListPending.ReadOnly = True
+        Me.gridListPending.Size = New System.Drawing.Size(237, 302)
+        Me.gridListPending.TabIndex = 48
         '
         'Label1
         '
@@ -302,11 +307,21 @@ Partial Class frmPaymentsAndPending
         Me.RichTextBox2.TabIndex = 72
         Me.RichTextBox2.Text = ""
         '
+        'btnRefreshPending
+        '
+        Me.btnRefreshPending.Location = New System.Drawing.Point(650, 10)
+        Me.btnRefreshPending.Name = "btnRefreshPending"
+        Me.btnRefreshPending.Size = New System.Drawing.Size(75, 23)
+        Me.btnRefreshPending.TabIndex = 73
+        Me.btnRefreshPending.Text = "Refresh"
+        Me.btnRefreshPending.UseVisualStyleBackColor = True
+        '
         'frmPaymentsAndPending
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(737, 557)
+        Me.Controls.Add(Me.btnRefreshPending)
         Me.Controls.Add(Me.RichTextBox2)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBox8)
@@ -330,15 +345,15 @@ Partial Class frmPaymentsAndPending
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.btnApprove)
+        Me.Controls.Add(Me.gridListPending)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmPaymentsAndPending"
         Me.Text = "Payments and Pending"
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridListPending, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -351,8 +366,8 @@ Partial Class frmPaymentsAndPending
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnApprove As System.Windows.Forms.Button
+    Friend WithEvents gridListPending As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -373,4 +388,5 @@ Partial Class frmPaymentsAndPending
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
+    Friend WithEvents btnRefreshPending As System.Windows.Forms.Button
 End Class

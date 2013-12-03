@@ -57,6 +57,7 @@ Partial Class frmServer
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDetail = New System.Windows.Forms.TextBox()
+        Me.test = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -342,11 +343,21 @@ Partial Class frmServer
         Me.txtDetail.Size = New System.Drawing.Size(750, 66)
         Me.txtDetail.TabIndex = 8
         '
+        'test
+        '
+        Me.test.AutoSize = True
+        Me.test.Location = New System.Drawing.Point(396, 13)
+        Me.test.Name = "test"
+        Me.test.Size = New System.Drawing.Size(39, 13)
+        Me.test.TabIndex = 9
+        Me.test.Text = "Label3"
+        '
         'frmServer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(750, 477)
+        Me.Controls.Add(Me.test)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
@@ -403,4 +414,5 @@ Partial Class frmServer
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtDetail As System.Windows.Forms.TextBox
+    Friend WithEvents test As System.Windows.Forms.Label
 End Class

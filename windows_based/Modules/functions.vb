@@ -1,10 +1,22 @@
 ﻿Imports MySql.Data.MySqlClient
 Class functions
-    'Fungsi Konek Database
+    'Fungsi Konek Database Lokal
     Public Shared Function localConnect()
         Try
             If (localConnection.State = ConnectionState.Closed) Then
                 localConnection.Open()
+            End If
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    'Fungsi Konek Database Web
+    Public Shared Function webConnect()
+        Try
+            If (webConnection.State = ConnectionState.Closed) Then
+                webConnection.Open()
             End If
             Return True
         Catch ex As Exception
@@ -342,5 +354,11 @@ Class functions
             frmMain.panelStatus.Text = "Daftar Customer Update Failed."
         End Try
         Return True
+    End Function
+
+    'Fungsi Random
+    Public Shared Function GetRandom(ByVal Min As Integer, ByVal Max As Integer) As Integer
+        Dim Generator As System.Random = New System.Random()
+        Return Generator.Next(Min, Max)
     End Function
 End Class

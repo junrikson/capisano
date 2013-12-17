@@ -530,25 +530,27 @@ Public Class frmServer
         Dim password As String = "C" + functions.GetRandom(100, 999).ToString + "A" + functions.GetRandom(10, 99).ToString + "P"
         Dim phone As String = "0" + Nomor.Substring(3, Nomor.Length - 3)
 
-        If ((Message.Substring(0, 3) = "REG") Or (Message.Substring(0, 3) = "reg")) Then
-            Try
-                functions.localConnect()
-                cmd = New MySqlCommand
-                cmd.Connection = functions.localConnection
-                cmd.CommandType = CommandType.Text
+        If (Message.Length > 2) Then
+            If ((Message.Substring(0, 3) = "REG") Or (Message.Substring(0, 3) = "reg")) Then
+                Try
+                    functions.localConnect()
+                    cmd = New MySqlCommand
+                    cmd.Connection = functions.localConnection
+                    cmd.CommandType = CommandType.Text
 
-                cmd.CommandText = "insert into daftarcustomer (phone, password) VALUES ('" & phone & "', '" & password & "')"
-                cmd.ExecuteNonQuery()
+                    cmd.CommandText = "insert into daftarcustomer (phone, password) VALUES ('" & phone & "', '" & password & "')"
+                    cmd.ExecuteNonQuery()
 
-                Dim pesan As String = "Pendaftaran Berhasil. USERNAME : " + phone + " dan PASSWORD : " + password
-                'Try
-                '    ExecuteSQLQuery("insert into sms_outbox(no_hp,tgl_sms,pesan,com,ip) values('" &
-                '                    Nomor & "','" & Format(Now, "yyyy-MM-dd hh:mm:ss") & "','" & pesan & "','" & Replace(CommPort, "COM", "") & "','" & ServerName & "')")
-                'Catch ex As Exception
+                    Dim pesan As String = "Pendaftaran Berhasil. USERNAME : " + phone + " dan PASSWORD : " + password
+                    Try
+                        ExecuteSQLQuery("insert into sms_outbox(no_hp,tgl_sms,pesan,com,ip) values('" &
+                                        Nomor & "','" & Format(Now, "yyyy-MM-dd hh:mm:ss") & "','" & pesan & "','" & Replace(CommPort, "COM", "") & "','" & ServerName & "')")
+                    Catch ex As Exception
 
-                'End Try
-            Catch ex As MySqlException
-            End Try
+                    End Try
+                Catch ex As MySqlException
+                End Try
+            End If
         End If
         Dim retVal As Long
 
@@ -564,7 +566,6 @@ Public Class frmServer
             retVal = 1
             Return retVal
         End Try
-
         Return retVal
     End Function
 

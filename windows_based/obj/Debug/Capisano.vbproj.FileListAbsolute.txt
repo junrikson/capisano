@@ -66,3 +66,4 @@ C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmSe
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmSetting.resources
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.Resources.resources
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.vbproj.GenerateResource.Cache
+C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.SMSapplication.resources

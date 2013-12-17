@@ -216,8 +216,15 @@
     <Compile Include="Forms\SMS\frmSetting.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SMS\SMSapplication.Designer.vb">
+      <DependentUpon>SMSapplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SMS\SMSapplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\functions.vb" />
     <Compile Include="Modules\SMS\clsMessageSender.vb" />
+    <Compile Include="Modules\SMS\clsSMS.vb" />
     <Compile Include="Modules\SMS\MessageEvent.vb" />
     <Compile Include="Modules\SMS\MessageItem.vb" />
     <Compile Include="Modules\SMS\MessageReceiver.vb" />
@@ -225,6 +232,7 @@
     <Compile Include="Modules\SMS\modPublicFunction.vb" />
     <Compile Include="Modules\SMS\modReg.vb" />
     <Compile Include="Modules\SMS\modType.vb" />
+    <Compile Include="Modules\SMS\ShortMessage.vb" />
     <Compile Include="Modules\variabels.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -308,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SMS\frmSetting.resx">
       <DependentUpon>frmSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SMS\SMSapplication.resx">
+      <DependentUpon>SMSapplication.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

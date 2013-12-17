@@ -198,4 +198,10 @@ Public Class frmMain
             functions.updateDaftarCustomer()
         End If
     End Sub
+
+    Private Sub SMSSettings2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SMSSettings2ToolStripMenuItem.Click
+        Dim frm As New SMSapplication
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

@@ -98,6 +98,7 @@ Partial Class frmMain
         Me.btnDI = New System.Windows.Forms.Button()
         Me.btnDKI = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.SMSSettings2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuMain.SuspendLayout()
         Me.panelMain.SuspendLayout()
         Me.panelRightBorder.SuspendLayout()
@@ -246,7 +247,7 @@ Partial Class frmMain
         '
         'SETTINGSToolStripMenuItem
         '
-        Me.SETTINGSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebSettingsToolStripMenuItem, Me.ToolStripSeparator1, Me.SMSSettingsToolStripMenuItem, Me.SMSTemplateToolStripMenuItem})
+        Me.SETTINGSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebSettingsToolStripMenuItem, Me.ToolStripSeparator1, Me.SMSSettingsToolStripMenuItem, Me.SMSSettings2ToolStripMenuItem, Me.SMSTemplateToolStripMenuItem})
         Me.SETTINGSToolStripMenuItem.Name = "SETTINGSToolStripMenuItem"
         Me.SETTINGSToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.SETTINGSToolStripMenuItem.Text = "SETTINGS"
@@ -286,13 +287,13 @@ Partial Class frmMain
         'ViewHelpToolStripMenuItem
         '
         Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ViewHelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'panelMain
@@ -725,6 +726,12 @@ Partial Class frmMain
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Interval (ms)"
         '
+        'SMSSettings2ToolStripMenuItem
+        '
+        Me.SMSSettings2ToolStripMenuItem.Name = "SMSSettings2ToolStripMenuItem"
+        Me.SMSSettings2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SMSSettings2ToolStripMenuItem.Text = "SMS Settings 2"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -829,5 +836,6 @@ Partial Class frmMain
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents SMSSettings2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

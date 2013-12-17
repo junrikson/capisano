@@ -36,7 +36,7 @@
 						while($row = mysql_fetch_row($result)){
 							if(($i % 2) != 0){
 								echo ' <div><div class="p4">
-                            <figure><a class="lightbox-image" href="images/default.jpg" data-gal="prettyPhoto[prettyPhoto]"><img src="images/default.jpg" alt="" width="200px" height="200px"></a></figure>
+                            <figure><a class="lightbox-image" href="images/'.$row[0].'.jpg" data-gal="prettyPhoto[prettyPhoto]"><img src="images/'.$row[0].'.jpg" alt="" width="200px" height="160px"></a></figure>
 							<h5>'.$row[1].'</h5>
                             <p class="p1">'.$row[2].'</p>
                             <p class="p2"><strong class="color-2">Harga: Rp '.$row[3].'</strong></p>
@@ -44,9 +44,9 @@
                         </div>';
 							}
 							else{
-								echo '<figure><a class="lightbox-image" href="images/slider-img2.jpg" data-gal="prettyPhoto[prettyPhoto]"><img src="images/default.jpg" alt="" width="200px" height="200px"></a></figure>
+								echo '<figure><a class="lightbox-image" href="images/'.$row[0].'.jpg" data-gal="prettyPhoto[prettyPhoto]"><img src="images/'.$row[0].'.jpg" alt="" width="200px" height="160px"></a></figure>
                         <h5>'.$row[1].'</h5>
-                        <p class="p1">'.$row[2].'<br>erat facer possim.</p>
+                        <p class="p1">'.$row[2].'</p>
                         <p class="p2"><strong class="color-2">Harga: Rp '.$row[3].'</strong></p>
                         <a class="button-1" href="index.php?order='.$row[0].'">Add to Cart</a>
                   </div>';

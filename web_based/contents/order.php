@@ -58,7 +58,7 @@ function item($arg){
 					</tr>
 					<tr>
 						<td align="right"><strong>Images :</strong></td>
-						<td align="left">&nbsp;<img src="images/default.jpg" alt="" width="200px" height="200px"><br/><br/></td>
+						<td align="left">&nbsp;<img src="images/default.jpg" alt="" width="200px" height="160px"><br/><br/></td>
 					</tr>
 					<tr>
 						<td align="right"><strong>Price :</strong></td>

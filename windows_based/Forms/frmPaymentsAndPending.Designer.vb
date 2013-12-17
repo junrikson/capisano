@@ -22,6 +22,7 @@ Partial Class frmPaymentsAndPending
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPaymentsAndPending))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -351,6 +352,7 @@ Partial Class frmPaymentsAndPending
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPaymentsAndPending"
         Me.Text = "Payments and Pending"
         CType(Me.gridListPending, System.ComponentModel.ISupportInitialize).EndInit()

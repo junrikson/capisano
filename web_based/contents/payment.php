@@ -36,10 +36,10 @@ function payment($arg){
 					echo '<td width="100px" align="center"><input type="submit" id="submit" value="Paid"></td>';
 				}
 				elseif($row[9] == "P"){
-					echo '<td width="100px" align="center"><input type="submit" id="submit" value="Paid"></td>';
+					echo '<td width="100px" align="center"><form action="./contents/invoice.php?id='.$row[0].'" method="post" id="invoice" target="_blank"><input type="submit" id="submit" value="Paid"></form></td>';
 				}
 				else{
-					echo '<td width="100px" align="center"><input type="submit" id="submit" value="Pending"></td>';
+					echo '<td width="100px" align="center"><form action="./contents/invoice.php?id='.$row[0].'" method="post" id="invoice" target="_blank"><input type="submit" id="submit" value="Pending"></form></td>';
 				}
 				echo '</tr>';
 			}
@@ -83,6 +83,7 @@ function payment($arg){
 						<td align="left">&nbsp;
 						 	<select name="bankname" id="bankname">
                   				<option>BCA - 0123456789</option>
+
 								<option>BNI - 0123456789</option>
 								<option>BRI - 0123456789</option>                  	
           	    			</select><br/><br/></td>						

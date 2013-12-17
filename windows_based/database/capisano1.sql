@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2013 at 09:34 PM
+-- Generation Time: Dec 17, 2013 at 09:46 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -45,9 +45,15 @@ CREATE TABLE IF NOT EXISTS `daftarcustomer` (
   `status` char(1) NOT NULL DEFAULT 'N',
   PRIMARY KEY (`phone`),
   UNIQUE KEY `code` (`phone`),
-  UNIQUE KEY `email` (`email`),
   KEY `auto` (`auto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `daftarcustomer`
+--
+
+INSERT INTO `daftarcustomer` (`phone`, `email`, `password`, `name`, `address`, `city`, `state`, `country`, `postal`, `auto`, `timestamp`, `operator`, `modul`, `status`) VALUES
+('admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 1, '2013-12-17 17:51:49', 'admin', 'DFTCUST', 'Y');
 
 -- --------------------------------------------------------
 
@@ -70,7 +76,23 @@ CREATE TABLE IF NOT EXISTS `daftaritem` (
   PRIMARY KEY (`code`),
   UNIQUE KEY `code` (`code`),
   KEY `auto` (`auto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `daftaritem`
+--
+
+INSERT INTO `daftaritem` (`code`, `name`, `kategori`, `price`, `details`, `images`, `auto`, `timestamp`, `operator`, `modul`, `status`) VALUES
+('G001', 'Ayam Panggang', '00', 12000, 'Ayam panggang dengan rasa enak dan tingkat kematangan sempurna pas untuk selera nusantara.', '', 1, '2013-12-17 18:08:45', 'admin', 'DFTITEM', 'Y'),
+('G002', 'Rujak Bali', '00', 8000, 'Rujak Bali dengan kualitas buah No.1 yang dipetik langsung dari kebun dan dengan saos yang lezat.', '', 2, '2013-12-17 18:21:45', 'admin', 'DFTITEM', 'Y'),
+('G003', 'Ice Cream', '00', 28000, 'Aneka Ice Cream dengan susu asli menjaga kelembutan dan rasa yang enak. Paduan buah dan saos lezat.', '', 3, '2013-12-17 18:25:37', 'admin', 'DFTITEM', 'Y'),
+('G004', 'Biscuit Berry', '00', 5000, 'Strawberry Biscuit dibuat dari tepung berkualitas dan Strawberry yang dipetik langsung dari kebunnya.', '', 4, '2013-12-17 18:30:16', 'admin', 'DFTITEM', 'Y'),
+('G005', 'Kacang Fantasy', '00', 25000, 'Campuran Kacang, sayuran dan buah-buahan dengan bumbu yang menyatukan semua rasa menjadi fantastis.', '', 5, '2013-12-17 18:34:44', 'admin', 'DFTITEM', 'Y'),
+('G006', 'Acar Spesial', '00', 12000, 'Campuran sayuran dan buah-buahan dengan bumbu yang menyatukan semua rasa menjadi fantastis.', '', 6, '2013-12-17 18:38:47', 'admin', 'DFTITEM', 'Y'),
+('G007', 'Special Snack', '00', 15000, 'Teh Hangat, buah dan beberapa roti akan mengasikkan suasana istirahat anda.', '', 7, '2013-12-17 18:55:13', 'admin', 'DFTITEM', 'Y'),
+('G008', 'X-Sea Food', '00', 23000, 'Udang, cumi dan beberapa sajian Seafood dengan bumbu yang pastinya lezat.', '', 8, '2013-12-17 18:57:42', 'admin', 'DFTITEM', 'Y'),
+('G009', 'Crazy Potatoes', '00', 9000, 'Kentang goreng gurih dengan bumbu super pedas akan menggoyang lidah anda.', '', 9, '2013-12-17 19:01:46', 'admin', 'DFTITEM', 'Y'),
+('G010', 'Heaven Soup', '00', 15000, 'Sup spesial dengan campuran berbagai rempah dengan bumbu kental nikmat.', '', 10, '2013-12-17 19:05:10', 'admin', 'DFTITEM', 'Y');
 
 -- --------------------------------------------------------
 
@@ -90,7 +112,14 @@ CREATE TABLE IF NOT EXISTS `daftarkategoriitem` (
   PRIMARY KEY (`code`),
   UNIQUE KEY `code` (`code`),
   KEY `auto` (`auto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `daftarkategoriitem`
+--
+
+INSERT INTO `daftarkategoriitem` (`code`, `name`, `details`, `auto`, `timestamp`, `operator`, `modul`, `status`) VALUES
+('00', 'General Category', 'General Category for all items.', 1, '2013-12-17 17:50:06', 'admin', 'DFTKITEM', 'Y');
 
 -- --------------------------------------------------------
 
@@ -110,7 +139,14 @@ CREATE TABLE IF NOT EXISTS `daftarkategorimenu` (
   PRIMARY KEY (`code`),
   UNIQUE KEY `code` (`code`),
   KEY `auto` (`auto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `daftarkategorimenu`
+--
+
+INSERT INTO `daftarkategorimenu` (`code`, `name`, `details`, `auto`, `timestamp`, `operator`, `modul`, `status`) VALUES
+('00', 'General Category', 'General Category for all menus.', 1, '2013-12-17 17:50:34', 'admin', 'DFTKMENU', 'N');
 
 -- --------------------------------------------------------
 

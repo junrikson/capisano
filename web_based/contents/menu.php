@@ -9,8 +9,8 @@
                             <div class="wrapper img-indent-bot">
                                 <figure class="img-indent"><img src="images/page2-img1.jpg" alt=""></figure>
                                 <div class="extra-wrap">
-                                    <h5>Nam liber tempor cusoluta </h5>
-                                    Nobis eleifend option congue nihil imperdiet doming quod mazim placerat facer possim orem ipsum dolor sit consectetuer.
+                                    <h5>Kentang Goreng Krispi cabe merah tabur </h5>
+                                    KEntang segar yang disjikan dengan taburan cabe merah yang akan menggugah nafsu makan anda kami berikan harga promo khusus untuk anda pelanggan setia kami dengan harga hanya :Rp.7.500,- porsi Syarat dan ketentuan berlaku, Promo ini hanya berlaku pada bulan desember 2013.
                                 </div>
                             </div>
                             <a class="button-1" href="#">Read More</a>
@@ -20,155 +20,49 @@
                             <div>
                                 <div class="p2">
                                 	<figure><a href="#"><img src="images/page2-img2.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
+                                    <h5>Pudding hitam kaya Rasa</h5>
                                     (Rp 15.000,-)
                                 </div>
                                 <div class="p2">
                                 	<figure><a href="#"><img src="images/page2-img5.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
+                                    <h5>Mie telur banyak rasa</h5>
                                     (Rp 12.000,-)
                                 </div>
                                 <figure><a href="#"><img src="images/page2-img8.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
+                                <h5>Sup jagung dengan kemangi</h5>
                                 (Rp 14.000,-)
                             </div>
                             <div>
                                 <div class="p2">
                                 	<figure><a href="#"><img src="images/page2-img3.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
+                                    <h5>Sate tusuk Campur-campur</h5>
                                     (Rp 12.000,-)
                                 </div>
                                 <div class="p2">
                                 	<figure><a href="#"><img src="images/page2-img6.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
+                                    <h5>Daging kHas merah dengan ubi jalar rica-ri</h5>
                                     (Rp 12.000,-)
                                 </div>
                                 <figure><a href="#"><img src="images/page2-img9.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
+                                <h5>Puding Suffle dengan stawberry</h5>
                                 (Rp 10.000,-)
                             </div>
                             <div>
                                 <div class="p2">
                                 	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
+                                    <h5>Udang Kuah Kuning</h5>
                                     (Rp 16.000,-)
                                 </div>
                                 <div class="p2">
                                 	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
+                                    <h5>Steak dalam dengan kuah mayonese udang</h5>
                                     (Rp 12.000,-)
                                 </div>
                                 <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
+                                <h5>Super Biggest Steak ala Capisano</h5>
                                 (Rp 18.000,-)
                             </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img2.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img5.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img8.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img3.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img6.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img9.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img2.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img5.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img8.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img3.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img6.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img9.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                            <div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
-                                    <h5>Nam liber tempor</h5>
-                                    (Rp 12.000,-)
-                                </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
-                                <h5>Nam liber tempor</h5>
-                                (Rp 12.000,-)
-                            </div>
-                        </div>
-                    </div>
+          
                 </article>
                 <article class="col-2">
                 	<h3>Daftar Menu dan Harga</h3>

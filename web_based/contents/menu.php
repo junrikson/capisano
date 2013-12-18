@@ -173,32 +173,29 @@
                 <article class="col-2">
                 	<h3>Daftar Menu dan Harga</h3>
                     <ul class="price-list p2">
-                      <li><span>Rp 12.000,-</span><a href="#">Nam liber tempor cum soluta nobis eleifend</a></li>
-                      <li><span>Rp &nbsp; 8.000,-</span><a href="#">Option congue nihil imperdiet doming id quod mazim</a></li>
-                      <li><span>Rp 14.000,-</span><a href="#">Placerat facer possim assum</a></li>
-                      <li><span>Rp 20.000,-</span><a href="#">Lorem ipsum dolor sit amet, consectetuer</a></li>
-                      <li><span>Rp 15.000,-</span><a href="#">Adipiscing elit, nonummy nibh euismod tincidunt</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Laoreet dolore magna aliquam erat volutpat</a></li>
-                      <li><span>Rp 15.000,-</span><a href="#">Ut wisi enim ad minim veniam, quis nostrud exerci</a></li>
-                      <li><span>Rp &nbsp; 8.000,-</span><a href="#">Tation ullamcorper suscipit lobortis nisl</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Aliquip ex ea commodo consequat</a></li>
-                      <li><span>Rp 21.000,-</span><a href="#">Ut wisi enim ad minim veniam, quis nostrud exerci</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea</a></li>
-                      <li><span>Rp 14.000,-</span><a href="#">Duis autem vel eum iriure dolor in hendrerit</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Vulputate velit consequat vel illum dolore</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Feugiat nulla facilisis at vero eros et accumsan</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Iusto odio dignissim qui blandit praesent luptatum</a></li>
-                      <li><span>Rp 18.000,-</span><a href="#">Azril delenit augue duis dolore te feugait nulla facilisi</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Nam liber soluta nobis eleifend option congue</a></li>
-                      <li><span>Rp 17.000,-</span><a href="#">Hihil imperdiet doming id quod mazim placerat</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing</a></li>
-                      <li><span>Rp 22.000,-</span><a href="#">Sed diam nonummy nibh euismod tincidunt</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Laoreet dolore magna aliquam erat volutpat</a></li>
-                      <li><span>Rp &nbsp; 9.000,-</span><a href="#">Ut wisi enim ad minim veniam, quis nostrud exerci</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Tation ullamcorper suscipit lobortis nisl</a></li>
-                      <li><span>Rp 17.000,-</span><a href="#">Nam liber tempor cum soluta nobis eleifend</a></li>
-                      <li><span>Rp 12.000,-</span><a href="#">Option congue nihil imperdiet doming id quod mazim</a></li>
-                      <li><span>Rp 19.000,-</span><a href="#">Placerat facer possim assum</a></li>
+                      <li><span>Rp 6.000,-</span><a href="#">ayam goreng</a></li>
+                      <li><span>Rp  8.000,-</span><a href="#">ayam bakar</a></li>
+                      <li><span>Rp 8.000,-</span><a href="#">ayam gulai</a></li>
+                      <li><span>Rp 8.000,-</span><a href="#">ayam goreng krispi</a></li>
+                      <li><span>Rp 6.000,-</span><a href="#">ayam goreng sambal</a></li>
+                      <li><span>Rp 7.000,-</span><a href="#">ayam goreng cabe hijau </a></li>
+                      <li><span>Rp 9.000,-</span><a href="#">ikan goreng</a></li>
+                      <li><span>Rp  11.000,-</span><a href="#">ikan bakar</a></li>
+                      <li><span>Rp 11.000,-</span><a href="#">ikan gulai</a></li>
+                      <li><span>Rp 9.000,-</span><a href="#">ikan goreng sambal</a></li>
+                      <li><span>Rp 10.000,-</span><a href="#">ikan goreng cabe hijau</a></li>
+                      <li><span>Rp 5.000,-</span><a href="#">telur rebus</a></li>
+                      <li><span>Rp 5.000,-</span><a href="#">telur mata sapi</a></li>
+                      <li><span>Rp 5.000,-</span><a href="#">telur dadar</a></li>
+                      <li><span>Rp 12.000,-</span><a href="#">rendang</a></li>
+                      <li><span>Rp 4.000,-</span><a href="#">sayur asem</a></li>
+                      <li><span>Rp 4.000,-</span><a href="#">tumis kankung</a></li>
+                      <li><span>Rp 4.000,-</span><a href="#">sayur gori</a></li>
+                      <li><span>Rp 7.000,-</span><a href="#">capcai</a></li>
+                      <li><span>Rp 8.000,-</span><a href="#">soto</a></li>
+                      <li><span>Rp 3.000,-</span><a href="#">tahu</a></li>
+                      <li><span>Rp &nbsp; 3.000,-</span><a href="#">tempe</a></li>
+                      
                     </ul>
                     <a class="button-2" href="#">Read More</a>
                 </article>

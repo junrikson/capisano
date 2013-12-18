@@ -17,8 +17,8 @@ Partial Public Class SMSapplication
 #End Region
 
 #Region "Private Variables"
-    Private port As New SerialPort()
-    Private objclsSMS As New clsSMS()
+    Public Shared port As New SerialPort()
+    Public Shared objclsSMS As New clsSMS()
     Private objShortMessageCollection As New ShortMessageCollection()
 #End Region
 
@@ -63,9 +63,9 @@ Partial Public Class SMSapplication
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         Try
             'Open communication port 
-            Me.port = objclsSMS.OpenPort(Me.cboPortName.Text, Convert.ToInt32(Me.cboBaudRate.Text), Convert.ToInt32(Me.cboDataBits.Text), Convert.ToInt32(Me.txtReadTimeOut.Text), Convert.ToInt32(Me.txtWriteTimeOut.Text))
+            SMSapplication.port = objclsSMS.OpenPort(Me.cboPortName.Text, Convert.ToInt32(Me.cboBaudRate.Text), Convert.ToInt32(Me.cboDataBits.Text), Convert.ToInt32(Me.txtReadTimeOut.Text), Convert.ToInt32(Me.txtWriteTimeOut.Text))
 
-            If Me.port IsNot Nothing Then
+            If SMSapplication.port IsNot Nothing Then
                 Me.gboPortSettings.Enabled = False
 
                 'MessageBox.Show("Modem is connected at PORT " + this.cboPortName.Text);
@@ -91,7 +91,7 @@ Partial Public Class SMSapplication
     Private Sub btnDisconnect_Click(sender As Object, e As EventArgs) Handles btnDisconnect.Click
         Try
             Me.gboPortSettings.Enabled = True
-            objclsSMS.ClosePort(Me.port)
+            objclsSMS.ClosePort(SMSapplication.port)
 
             'Remove tab pages
             Me.tabSMSapplication.TabPages.Remove(tbSendSMS)
@@ -106,12 +106,20 @@ Partial Public Class SMSapplication
         End Try
     End Sub
 
+    Public Shared Function sendSMS(nomor As String, pesan As String)
+        Try
+            objclsSMS.sendMsg(port, nomor, pesan)
+        Catch ex As Exception
+        End Try
+        Return True
+    End Function
+
     Private Sub btnSendSMS_Click(sender As Object, e As EventArgs) Handles btnSendSMS.Click
 
         '.............................................. Send SMS ....................................................
         Try
 
-            If objclsSMS.sendMsg(Me.port, Me.txtSIM.Text, Me.txtMessage.Text) Then
+            If objclsSMS.sendMsg(SMSapplication.port, Me.txtSIM.Text, Me.txtMessage.Text) Then
                 'MessageBox.Show("Message has sent successfully");
                 Me.statusBar1.Text = "Message has sent successfully"
             Else
@@ -126,7 +134,7 @@ Partial Public Class SMSapplication
     Private Sub btnReadSMS_Click(sender As Object, e As EventArgs) Handles btnReadSMS.Click
         Try
             'count SMS 
-            Dim uCountSMS As Integer = objclsSMS.CountSMSmessages(Me.port)
+            Dim uCountSMS As Integer = objclsSMS.CountSMSmessages(SMSapplication.port)
             If uCountSMS > 0 Then
 
                 '#Region "Command"
@@ -146,7 +154,7 @@ Partial Public Class SMSapplication
                 ' If SMS exist then read SMS
                 '#Region "Read SMS"
                 '.............................................. Read all SMS ....................................................
-                objShortMessageCollection = objclsSMS.ReadSMS(Me.port, strCommand)
+                objShortMessageCollection = objclsSMS.ReadSMS(SMSapplication.port, strCommand)
                 For Each msg As ShortMessage In objShortMessageCollection
 
                     Dim item As New ListViewItem(New String() {msg.Index, msg.Sent, msg.Sender, msg.Message})
@@ -169,7 +177,7 @@ Partial Public Class SMSapplication
     Private Sub btnDeleteSMS_Click(sender As Object, e As EventArgs) Handles btnDeleteSMS.Click
         Try
             'Count SMS 
-            Dim uCountSMS As Integer = objclsSMS.CountSMSmessages(Me.port)
+            Dim uCountSMS As Integer = objclsSMS.CountSMSmessages(SMSapplication.port)
             If uCountSMS > 0 Then
                 Dim dr As DialogResult = MessageBox.Show("Are u sure u want to delete the SMS?", "Delete confirmation", MessageBoxButtons.YesNo)
 
@@ -181,7 +189,7 @@ Partial Public Class SMSapplication
 
                         '#Region "Delete all SMS"
                         Dim strCommand As String = "AT+CMGD=1,4"
-                        If objclsSMS.DeleteMsg(Me.port, strCommand) Then
+                        If objclsSMS.DeleteMsg(SMSapplication.port, strCommand) Then
                             'MessageBox.Show("Messages has deleted successfuly ");
                             Me.statusBar1.Text = "Messages has deleted successfuly"
                         Else
@@ -195,7 +203,7 @@ Partial Public Class SMSapplication
 
                         '#Region "Delete Read SMS"
                         Dim strCommand As String = "AT+CMGD=1,3"
-                        If objclsSMS.DeleteMsg(Me.port, strCommand) Then
+                        If objclsSMS.DeleteMsg(SMSapplication.port, strCommand) Then
                             'MessageBox.Show("Messages has deleted successfuly");
                             Me.statusBar1.Text = "Messages has deleted successfuly"
                         Else
@@ -217,7 +225,7 @@ Partial Public Class SMSapplication
     Private Sub btnCountSMS_Click(sender As Object, e As EventArgs) Handles btnCountSMS.Click
         Try
             'Count SMS
-            Dim uCountSMS As Integer = objclsSMS.CountSMSmessages(Me.port)
+            Dim uCountSMS As Integer = objclsSMS.CountSMSmessages(SMSapplication.port)
             Me.txtCountSMS.Text = uCountSMS.ToString()
         Catch ex As Exception
             ErrorLog(ex.Message)

@@ -1,4 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Drawing
+Imports System.Text
+Imports System.IO.Ports
+Imports System.Threading
+Imports System.Text.RegularExpressions
+
 Public Class frmServer
     Dim Buffer As Object = ""
     Dim Command As String
@@ -531,7 +537,7 @@ Public Class frmServer
         Dim phone As String = "0" + Nomor.Substring(3, Nomor.Length - 3)
 
         If (Message.Length > 2) Then
-            If ((Message.Substring(0, 3) = "REG") Or (Message.Substring(0, 3) = "reg")) Then
+            If ((Message.Substring(0, 3) = "REG") Or (Message.Substring(0, 3) = "reg") Or (Message.Substring(0, 3) = "Reg")) Then
                 Try
                     functions.localConnect()
                     cmd = New MySqlCommand
@@ -543,10 +549,9 @@ Public Class frmServer
 
                     Dim pesan As String = "Pendaftaran Berhasil. USERNAME : " + phone + " dan PASSWORD : " + password
                     Try
-                        ExecuteSQLQuery("insert into sms_outbox(no_hp,tgl_sms,pesan,com,ip) values('" &
-                                        Nomor & "','" & Format(Now, "yyyy-MM-dd hh:mm:ss") & "','" & pesan & "','" & Replace(CommPort, "COM", "") & "','" & ServerName & "')")
+                        SMSapplication.sendSMS(phone, pesan)
                     Catch ex As Exception
-
+                        MessageBox.Show(ex.ToString)
                     End Try
                 Catch ex As MySqlException
                 End Try

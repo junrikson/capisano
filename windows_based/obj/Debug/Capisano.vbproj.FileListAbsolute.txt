@@ -39,9 +39,7 @@ C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.pdb
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\bin\Debug\Capisano.exe
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\bin\Debug\Capisano.pdb
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\bin\Debug\Capisano.xml
-C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\bin\Debug\AntControl.pdb
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\bin\Debug\AntControl.xml
-C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.vbprojResolveAssemblyReference.cache
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmDaftarCustomer.resources
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmAbout.resources
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmActivityLog.resources
@@ -67,3 +65,4 @@ C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.frmSe
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.Resources.resources
 C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.vbproj.GenerateResource.Cache
 C:\Users\SIMAMORA\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.SMSapplication.resources
+C:\Users\SAKIUS\Documents\GitHub\capisano\windows_based\obj\Debug\Capisano.SMSapplication.resources

@@ -1,0 +1,6 @@
+12/18/2013 9:12:22 AM ==> No success message was received.
+12/18/2013 9:12:39 AM ==> No success message was received.
+12/18/2013 9:12:44 AM ==> No success message was received.
+12/18/2013 9:20:29 AM ==> No success message was received.
+12/18/2013 9:21:45 AM ==> Response received is incomplete.
+12/18/2013 9:23:48 AM ==> The process cannot access the port 'COM6' because it is being used by another process.
